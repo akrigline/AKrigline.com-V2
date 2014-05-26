@@ -1,5 +1,5 @@
 //Importing
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:400,300);
 
 //Variables
 @color1: #00afff;
@@ -10,8 +10,8 @@
 @lighttext: #fff;
 
 @font: font-family;
-@head: "Roboto Condensed";
-@body: "Roboto";
+@head: "Roboto Condensed", sans-serif;
+@body: "Roboto", sans-serif;
 
 @lineheight: 1.4em;
 
@@ -22,25 +22,36 @@ body{
 }
 
 
-h1,h2,h4,h5{
-	@font:@head;
+h1, h2, h4, h5{
+	@{font}:@head;
 	line-height:@lineheight;
+	margin:0;
 }
 h1{
 	font-size:2em;
+	font-weight:300;
 }
 h2{
 	font-size:1.6em;
+	font-weight:300;
 }
 h3{
-	@font:@body;
+	@{font}:@body;
 	font-size: 1.2em;
+	font-weight:300;
 }
 h4{
 }
 
 p{
 	font-size:.9em;
+}
+
+figcaption{
+	@{font}:@body;
+	font-weight:300;
+	font-size:.8em;
+	text-align:center;
 }
 
 a{
@@ -122,5 +133,23 @@ article{
 	header{
 		text-align:center;
 
+		h1{
+			margin:20px 0;
+		}
+		h2{
+			margin:10px 0;
+		}
+
+	}
+
+	.icons{
+		margin:50px 0;
+
+		figure{
+			float:left;
+			width:40%;
+			margin: 20px 5%;
+			text-align:center;
+		}
 	}
 }
