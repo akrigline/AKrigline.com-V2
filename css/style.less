@@ -10,8 +10,32 @@
 @lighttext: #fff;
 
 @font: font-family;
-@headlinefont: "Roboto Condensed";
-@bodyfont: "Roboto";
+@head: "Roboto Condensed";
+@body: "Roboto";
+
+@lineheight: 1.4em;
+
+//Type Styles
+body{
+	font-size:1em;
+	line-height:@lineheight;
+}
+
+h1{
+	@font:@head;
+	font-size:2em;
+}
+h2{
+	@font:@head;
+	font-size:1.6em;
+}
+h3{
+	@font:@body;
+	font-size: 1.2em;
+}
+h4{
+	@font:@head;
+}
 
 //Sitewide
 *{
@@ -20,23 +44,25 @@
 }
 
 body{
-	background-color: @color1;
-	@{font}:@bodyfont;
+	background-color: @color2;
+	@{font}:@body;
 }
 
 header.top{
 	width:100%;
-	height:6em;
+	height:@lineheight+1em;
 	background:#fff;
+	position:fixed;
+	top:0;
 
-	picture{
-		margin:0 auto;
-		width:3em;
-		height:3em;
-
-		img{
-			width:3em;
-			height:3em;
+	.logo{
+		width:20%;
+		height:@lineheight+1em;
+		display:block;
+		float:left;
+		picture, img{
+			height:100%;
+			width:auto;
 		}
 		
 	}
@@ -45,17 +71,22 @@ header.top{
 		ul{
 			list-style:none;
 			text-align:center;
-			width:100%;
+			width:80%;
 			float:left;
 			li{
 				display:inline-block;
+				float:left;
+				width:25%;
 				a{
-					color:@color1;
+					color:@color2;
 					text-decoration:none;
 					display:inline-block;
-					height:3em;
-					padding:1em .2em;
-					@{font}:@headlinefont;
+
+					height:@lineheight;
+					width:100%;
+					padding:.5em 0;
+
+					@{font}:@head;
 				}
 				a:hover{
 					color:@lighttext;

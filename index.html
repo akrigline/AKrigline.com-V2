@@ -26,25 +26,26 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header class="top">
-        <picture class="logo">
-            <source srcset="img/logo/extralarge.png" media="(min-width: 1000px)">
-            <source srcset="img/logo/large.png" media="(min-width: 800px)">
-            <source srcset="img/logo/medium.png">
-            <img src="img/logo/medium.png" alt="">
-        </picture>
+        <a href="#home" class="logo">
+            <picture>
+                <source srcset="img/logo/extralarge.png" media="(min-width: 1000px)">
+                <source srcset="img/logo/large.png" media="(min-width: 800px)">
+                <source srcset="img/logo/medium.png">
+                <img src="img/logo/medium.png" alt="">
+            </picture>
+        </a>
 
         <nav>
             <ul>
-                <li><a href="#" title="">Home</a></li>
-                <li><a href="#" title="">About</a></li>
-                <li><a href="#" title="">Portfolio</a></li>
-                <li><a href="#" title="">Contact</a></li>
+                <li><a href="#about" title="">About</a></li>
+                <li><a href="#portfolio" title="">Portfolio</a></li>
+                <li><a href="#contact" title="">Contact</a></li>
                 <li><a href="#" title="">Blog</a></li>
             </ul>
         </nav>
     </header>
     
-    <article><!-- Greeting -->
+    <article id="home"><!-- Greeting -->
         <header>
             <h1>Greetings and Salutations</h1>
             <h2>My name is Andrew Krigline</h2>
@@ -53,25 +54,25 @@
 
         <div>
             <figure>
-                <a href="" title=""><img src="img/icons/" alt="About Me"></a>
+                <a href="#about" title=""><img src="img/icons/" alt="About Me"></a>
                 <figcaption>Learn more about me</figcaption>
             </figure>
             <figure>
-                <a href="" title=""><img src="img/icons/" alt="Portfolio"></a>
+                <a href="#portfolio" title=""><img src="img/icons/" alt="Portfolio"></a>
                 <figcaption>Check out my portfolio</figcaption>
             </figure>
             <figure>
-                <a href="" title=""><img src="img/icons/" alt="Contact"></a>
+                <a href="#contact" title=""><img src="img/icons/" alt="Contact"></a>
                 <figcaption>Get in touch</figcaption>
             </figure>
             <figure>
-                <a href="" title=""><img src="img/icons/" alt="Blog"></a>
+                <a href="#" title=""><img src="img/icons/" alt="Blog"></a>
                 <figcaption>Check out my blog</figcaption>
             </figure>
         </div>
     </article><!-- /Greeting -->
 
-    <article><!-- About me -->
+    <article id="about"><!-- About me -->
 
         <section><!-- Biography -->
             <figure>
@@ -164,7 +165,7 @@
         </section>
     </article><!-- /About me -->
 
-    <article><!-- Portfolio -->
+    <article id="portfolio"><!-- Portfolio -->
 
         <section>
             <figure><!-- Images -->
@@ -192,7 +193,7 @@
 
     </article><!-- /Portfolio -->
 
-    <section><!-- Contact -->
+    <section id="contact"><!-- Contact -->
         <header>
             <h1>Drop me a line</h1>
             <h2>I'd love to get in touch</h2>
