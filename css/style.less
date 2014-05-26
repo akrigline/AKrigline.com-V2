@@ -1,3 +1,6 @@
+//Importing
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,300);
+
 //Variables
 @color1: #00afff;
 @color2: #1930bf;
@@ -5,6 +8,10 @@
 @color4: #ff9930;
 @color5: #d94d0f;
 @lighttext: #fff;
+
+@font: font-family;
+@headlinefont: "Roboto Condensed";
+@bodyfont: "Roboto";
 
 //Sitewide
 *{
@@ -14,6 +21,7 @@
 
 body{
 	background-color: @color1;
+	@{font}:@bodyfont;
 }
 
 header.top{
@@ -47,6 +55,7 @@ header.top{
 					display:inline-block;
 					height:3em;
 					padding:1em .2em;
+					@{font}:@headlinefont;
 				}
 				a:hover{
 					color:@lighttext;
