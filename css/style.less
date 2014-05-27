@@ -17,19 +17,20 @@
 
 //Type Styles
 body{
+	@{font}:@body;
 	font-size:1em;
 	line-height:@lineheight;
 }
 
 
-h1, h2, h4, h5{
+h1, h2, h3, h4, h5{
 	@{font}:@head;
 	line-height:@lineheight;
 	margin:0;
 }
 h1{
 	font-size:2em;
-	font-weight:300;
+	font-weight:340;
 }
 h2{
 	font-size:1.6em;
@@ -41,10 +42,14 @@ h3{
 	font-weight:300;
 }
 h4{
+	font-size:1em;
+	font-weight:300;
 }
 
-p{
-	font-size:.9em;
+article{
+	p, dl, ul{
+		font-size:.9em;
+	}
 }
 
 figcaption{
@@ -62,11 +67,13 @@ a{
 *{
 	padding:0;
 	margin:0;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
 }
 
 body{
 	background-color: @color2;
-	@{font}:@body;
 }
 
 header.top{
@@ -84,15 +91,16 @@ header.top{
 		padding:0;
 		height:@lineheight+1em;
 
-		picture, img{
-			height:90%;
-			margin:5% 0;
+		img{
+			height:2em;
+			margin:.2em 0;
 			width:auto;
 		}
 		
 	}
 	
 	nav{
+
 		ul{
 			list-style:none;
 			text-align:center;
@@ -103,19 +111,33 @@ header.top{
 				float:left;
 				width:20%;
 				a{
-					color:@color2;
-					text-decoration:none;
 					display:inline-block;
-
-					height:@lineheight;
+					height:@lineheight+1em;
 					width:100%;
 					padding:.5em 0;
 
+					color:@color2;
+					text-decoration:none;
 					@{font}:@head;
 				}
 				a:hover{
-					color:@lighttext;
 					background:@color1;
+					color:@lighttext;
+				}
+				ul{
+					display:none;
+					background:#fff;
+					width:6em;
+					li{
+						float:none;
+						display:inline;
+
+					}
+				}
+			}
+			li:hover{
+				ul{
+					display:block;
 				}
 			}
 		}
@@ -124,26 +146,27 @@ header.top{
 
 article{
 	width:100%;
+	padding:@lineheight+1em 5% 0;
 	color:@lighttext;
 }
 
 #home{
-	padding-top: @lineheight+1em;
 
 	header{
 		text-align:center;
 
 		h1{
-			margin:20px 0;
+			margin:.4em 0;
 		}
 		h2{
-			margin:10px 0;
+			margin:.4em 0;
 		}
-
 	}
 
 	.icons{
-		margin:50px 0;
+		margin:3em 0;
+		display:inline-block;
+		width:100%;
 
 		figure{
 			float:left;
@@ -151,5 +174,29 @@ article{
 			margin: 20px 5%;
 			text-align:center;
 		}
+	}	
+}
+
+#about{
+	section{
+		figure{
+			width:40%;
+			margin: 2em auto;
+			text-align:center;
+
+			img{
+				width:3em;
+				height:3em;
+			}
+		}
+		dl{
+			dt{
+				font-weight:bold;
+			}
+			dd{
+				margin-left:1em;
+			}
+		}
+
 	}
 }
