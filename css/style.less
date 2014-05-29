@@ -214,10 +214,11 @@ header{
 		width:80%;
 		margin: 2em auto 0;
 		p{
-			margin:0;
+			margin: 0;
 
 			label{
-				margin:0 0 1em;
+				margin:1em 0 .4em;
+				float:left;
 			}
 			input, textarea{
 				width:90%;
@@ -226,14 +227,15 @@ header{
 			    font-size: 1em;
 			    border-radius:.2em;
 			    border:1px solid #ccc;
+			    float:right;
 			}
 			button{
-				padding: 1em;
+				padding: 1em 1em .8em 1em;
 			    background:fff;
 			    border: 1px solid #ccc;
 			    margin: 1em 0 0 10%;
 			    border-radius:.2em;
-			    width: auto;
+			    width: 6em;
 			}
 		}
 	}
@@ -265,11 +267,63 @@ footer{
 @media (min-width:34em){
 	body{
 		max-width:51em;
+		font-size:1em;
+	}
+
+	#home{
+		header{
+			margin:5em 0 0;
+		}
+
+		.icons{
+			figure{
+				width:15%;
+			}
+		}
+	}
+
+	#about{
+		section{
+			figure{
+				width:15%;
+				float:left;
+			}
+			p, dl{
+				width:70%;
+				margin:0 10% 0 20%;
+
+			}
+		}
+		#extras{
+			dl{
+				width:35%;
+				margin:0 10% 0 0;
+				float:right;
+			}
+			dl:last-child{
+				margin-right:5%;
+				width:30%;
+			}
+		}
+	}
+
+	#contact{
+		form{
+			max-width:24em;
+			margin:0 auto;
+		}
 	}
 }
 
 @media (min-width:51em){
 	body{
 		max-width:68em;
+	}
+}
+
+@media (min-width:68em){
+	body{
+		max-width: 112em;
+		margin:0 auto;
 	}
 }
