@@ -49,13 +49,28 @@ $(window).load(function() {
 });
  
 $(window).resize(function() {
-    $imagePan.unbind("mousemove");
+    $(window).unbind("mousemove");
     $imagePan_container.css("top",0).css("left",0);
     $(window).load();
 });
 
-$('.top-nav').affix({
-    offset: {
-        top: $('.welcome').height()
-    }
+//Initialize Sticky.js
+$(document).ready(function(){
+    $(".top-nav").sticky({
+        topSpacing:0,
+        getWidthFrom:'#intro',
+        responsiveWidth:true
+    });
+});
+
+// Reset ScrollSpy on Resize
+$('[data-spy="scroll"]').resize(function () {
+    var $spy = $(this).scrollspy('refresh')
+})
+
+// Initialize LocalScroll
+$('.top-nav').localScroll({
+    duration:500,
+    hash:true,
+    offset: -60
 });

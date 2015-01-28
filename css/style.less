@@ -62,7 +62,6 @@ h4{
 
 article{
 	p, dl, ul{
-		font-size:.9em;
 		line-height:1.6em;
 	}
 }
@@ -89,23 +88,24 @@ html, body, .fullHeight{
 Home Page
 ----------*/
 
-section{
+section,article{
 	height:100%;
 }
 
 /********** Navig **********/
 
-.top-nav.affix{
-	position:fixed;
-	top:0;
-	width:100%;
-}
-
 .top-nav{
 	height:4.4em;
+	border-radius: 0;
+	transition:all 300ms;
 	font-size: 1.2em;
 	margin-bottom:0;
 	border:none;
+	z-index:1000;
+
+	width:100%;
+
+	background:rgba(255,255,255,0.25);
 
 	.navbar-nav{
 		li{
@@ -119,24 +119,29 @@ section{
 		}
 	}
 
-	.container{
-		background-color:@white;
-	}
-
-	img{
+	.brand{
+		display:block;
+		width:3em;
 		height:3em;
 		margin:.6em 0;
+		background-image:url(../img/logo/large.png);
+		background-size:100%;
 	}
+}
+
+.is-sticky .top-nav{
+	background:@white;
 }
 
 /********** Intro **********/
 
 .welcome{
-	height:90%;
+	height:100%;
+	margin-bottom:-5em;
 }
 
 #intro{
-	z-index:-1;
+	z-index:-2;
 	position:fixed;
 	top:0;
 	left:0;
@@ -153,15 +158,16 @@ section{
 /********** About **********/
 
 #aboutMe{
+	background:@white;
 	.container{
-		background:rgba(255,255,255,0.8);
+		
 	}
 }
 
 /********** Resume **********/
 
 #resume{
-	
+	background:@white;
 }
 
 /********** Portfolio **********/
@@ -172,6 +178,7 @@ section{
 
 /********** Footer **********/
 footer{
+	background:@color3;
 	min-height:10em;
 }
 
