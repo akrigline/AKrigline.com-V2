@@ -43,7 +43,7 @@ $(window).load(function() {
  
     //$imagePan_panning.css("margin-left",($imagePan.width()-$imagePan_panning.width())/2).css("margin-top",($imagePan.height()-$imagePan_panning.height())/2);
  
-    $imagePan.bind("mousemove", function(event){
+    $(window).bind("mousemove", function(event){
         MouseMove(event);
     });
 });
@@ -52,4 +52,10 @@ $(window).resize(function() {
     $imagePan.unbind("mousemove");
     $imagePan_container.css("top",0).css("left",0);
     $(window).load();
+});
+
+$('.top-nav').affix({
+    offset: {
+        top: $('.welcome').height()
+    }
 });

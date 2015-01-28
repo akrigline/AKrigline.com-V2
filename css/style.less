@@ -94,24 +94,34 @@ section{
 
 /********** Navig **********/
 
+.top-nav.affix{
+	position:fixed;
+	top:0;
+	width:100%;
+}
+
 .top-nav{
 	height:4.4em;
 	font-size: 1.2em;
+	margin-bottom:0;
+	border:none;
+
 	.navbar-nav{
 		li{
 			a{
-				line-height: 2em;
+				line-height: 2.3em;
 			}
 		}
 	}
+
 	.container{
 		background-color:@white;
 	}
 
-		img{
-			height:3em;
-			margin:.6em 0;
-		}
+	img{
+		height:3em;
+		margin:.6em 0;
+	}
 }
 
 /********** Intro **********/
@@ -121,6 +131,7 @@ section{
 }
 
 #intro{
+	z-index:-1;
 	position:fixed;
 	top:0;
 	left:0;
@@ -134,8 +145,20 @@ section{
 }
 
 
+/********** About **********/
+
+#aboutMe{
+	.container{
+		background:rgba(255,255,255,0.8);
+	}
+}
+
+/********** Resum **********/
+
+/********** Portf **********/
 
 
+/* Hack for an XL class in Bootstrap */
 @media screen and (min-width:1660px){
 	.container{
 		width:80%;
