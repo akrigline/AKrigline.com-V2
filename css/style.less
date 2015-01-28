@@ -18,6 +18,7 @@ VARIABLES
 @color4: #ff9930;
 @color5: #d94d0f;
 @white: #fff;
+@black: #000;
 
 @font: font-family;
 @head: "Roboto Condensed", sans-serif;
@@ -110,7 +111,11 @@ section{
 		li{
 			a{
 				line-height: 2.3em;
+				color:@black;
 			}
+		}
+		li.active{
+			background:@color4
 		}
 	}
 
@@ -153,9 +158,22 @@ section{
 	}
 }
 
-/********** Resum **********/
+/********** Resume **********/
 
-/********** Portf **********/
+#resume{
+	
+}
+
+/********** Portfolio **********/
+
+#portfolio{
+
+}
+
+/********** Footer **********/
+footer{
+	min-height:10em;
+}
 
 
 /* Hack for an XL class in Bootstrap */
