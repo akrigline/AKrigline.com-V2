@@ -80,7 +80,7 @@ function() {
     $(".scrollThrough h1").Morphext({
         animation: "flipInX",
         separator: ",",
-        speed: 5000
+        speed: 7500
     });
 
     setTimeout( function (){
@@ -92,7 +92,7 @@ function() {
             // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
             separator: ",",
             // The delay between the changing of each phrase in milliseconds.
-            speed: 5000
+            speed: 7500
         });
-    }, 7500 );
+    }, 3750 );
 });

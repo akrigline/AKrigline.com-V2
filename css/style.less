@@ -89,7 +89,7 @@ a{
 
 /********** Layout **********/
 
-html, body, .fullHeight{
+html, body, .fullHeight, section{
 	height:100%;
 }
 
@@ -97,8 +97,8 @@ html, body, .fullHeight{
 Home Page
 ----------*/
 
-section,article{
-	height:100%;
+article{
+	min-height:100%;
 }
 
 /********** Navig **********/
@@ -229,6 +229,10 @@ section,article{
 #resume{
 	padding-top:2em;
 	background:@white;
+
+	section{
+		height:auto;
+	}
 }
 
 dt{
@@ -240,7 +244,8 @@ dt ~ dt{
 }
 
 dd.position{
-	font-size:1.2em;
+	font-size:1.8em;
+	font-weight:300;
 }
 
 dd.small{
