@@ -15,7 +15,7 @@ $(window).load(function() {
     containerHeight=$imagePan.height();
     totalContentW=$imagePan_panning.width();
     totalContentH=$imagePan_panning.height();
-    $imagePan_container.css("width",totalContentW).css("height",totalContentH);
+    $imagePan_container.css("width",totalContentW).css("height",totalContentH).css('left',-((totalContentW-(containerWidth))-containerWidth)).css('top',((totalContentH-(containerHeight))-containerHeight)*2);
  
     function MouseMove(e){
         var mouseCoordsX=(e.pageX - $imagePan.offset().left);
@@ -40,12 +40,13 @@ $(window).load(function() {
             $imagePan_container.stop();
         }
     }
- 
+
     //$imagePan_panning.css("margin-left",($imagePan.width()-$imagePan_panning.width())/2).css("margin-top",($imagePan.height()-$imagePan_panning.height())/2);
  
     $(window).bind("mousemove", function(event){
         MouseMove(event);
     });
+
 });
  
 $(window).resize(function() {
@@ -74,3 +75,26 @@ $('.top-nav').localScroll({
     hash:true,
     offset: -60
 });
+
+
+$(".scrollThrough h1").Morphext({
+    // The [in] animation type. Refer to Animate.css for a list of available animations.
+    animation: "flipInX",
+    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+    separator: ",",
+    // The delay between the changing of each phrase in milliseconds.
+    speed: 5000
+});
+
+setTimeout( function (){
+    $(".scrollThroughOffset h1").css('display', 'none');
+    $(".scrollThroughOffset .hideme").css('display', 'inline-block');
+    $(".scrollThroughOffset .hideme").Morphext({
+        // The [in] animation type. Refer to Animate.css for a list of available animations.
+        animation: "flipInX",
+        // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+        separator: ",",
+        // The delay between the changing of each phrase in milliseconds.
+        speed: 5000
+    });
+}, 7500 );
