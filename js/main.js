@@ -15,7 +15,7 @@ $(window).load(function() {
     containerHeight=$imagePan.height();
     totalContentW=$imagePan_panning.width();
     totalContentH=$imagePan_panning.height();
-    $imagePan_container.css("width",totalContentW).css("height",totalContentH).css('left',-((totalContentW-(containerWidth))-containerWidth)).css('top',((totalContentH-(containerHeight))-containerHeight)*2);
+    $imagePan_container.css("width",totalContentW).css("height",totalContentH).css('left',-((totalContentW-containerWidth)/2));
  
     function MouseMove(e){
         var mouseCoordsX=(e.pageX - $imagePan.offset().left);
