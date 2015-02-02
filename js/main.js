@@ -73,7 +73,7 @@ function() {
     $('.top-nav').localScroll({
         duration:500,
         hash:true,
-        offset: -60
+        offset: -68
     });
 
     //Initialize Morphext

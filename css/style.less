@@ -53,6 +53,13 @@ dt{
 	line-height:@lineheight;
 }
 
+h1{
+	font-weight:100;
+}
+
+h2{
+	font-weight:300;
+}
 
 dt{
 	font-size:2em;
@@ -128,16 +135,33 @@ article{
 
 	.navbar-nav{
 		li{
-
 			transition:background 300ms;
+
+			&.active{
+				background:@black;
+
+				&.res{
+					background:@white;
+					a{
+						color:@black;
+					}
+				}
+				&.port{
+					background:@black;
+					color:@white;
+				}
+			}
 
 			a{
 				line-height: 2.3em;
 				color:@white;
 			}
-		}
-		li.active{
-			background:@black;
+
+			&:hover{
+				a{
+					color:#333;
+				}
+			}
 		}
 	}
 
@@ -263,6 +287,7 @@ h4{
 
 dd{
 	padding-left:2em;
+	padding-right:2em;
 }
 
 dd.small{
@@ -317,7 +342,76 @@ dd.small{
 /********** Portfolio **********/
 
 #portfolio{
+	padding-top:15px;
+	padding-bottom: 15px;
+	background:@black;
+	color:@white;
+	position:relative;
+	h2{
+		text-align:center;
+	}
+	ul{
+		margin-bottom:0;
+	}
 
+	figure{
+		width:100%;
+		height:0;
+		position:relative;
+		padding-top:50%;
+		overflow: hidden;
+		display:block;
+		img{
+			display:block;
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			width:100%;
+			margin:auto;
+		}
+		figcaption{
+			position: absolute;
+			right:-100%;
+			top:0;
+			height:100%;
+			padding:1em;
+			transition: right 300ms;
+			background: rgba(0,0,0,0.75);
+			overflow: hidden;
+			color:@white;
+			h1{
+				margin:0;
+			}
+		}
+		.continue{
+			position:absolute;
+			bottom:1em;
+			right:50%;
+			opacity:0;
+			transition:all 300ms;
+		}
+		a:hover{
+			.continue{
+				opacity:1;
+				right:1em;
+			}
+		}
+	}
+	figure:hover{
+		figcaption{
+			right:0;
+		}
+	}
+}
+
+@media screen and (min-width:768px){
+	#portfolio{
+		figure{
+			padding-top: 25%;
+		}
+	}
 }
 
 /********** Footer **********/
@@ -326,7 +420,12 @@ footer{
 	background:rgba(0,0,0,0.3);
 	position:relative;
 	overflow: hidden;
-
+	h1{
+		background:@black;
+		padding:.4em;
+		color:@white;
+		margin-top:1em;
+	}
 	.contactContainer{
 		position: absolute;
 		top:0;
@@ -335,7 +434,7 @@ footer{
 		right:0;
 		margin:auto;
 		height:0;
-		padding-top:50%;
+		padding-top:90%;
 		background:#fff;
 		form{
 			position: absolute;
@@ -347,10 +446,38 @@ footer{
 	}
 }
 
+@media screen and (min-width:460px){
+	footer{
+		.contactContainer{
+			padding-top: 75%;
+		}
+	}
+}
+@media screen and (min-width:768px){
+	footer{
+		.contactContainer{
+			padding-top: 50%;
+		}
+	}
+}
+@media screen and (min-width:992px){
+	footer{
+		.contactContainer{
+			padding-top: 40%;
+		}
+	}
+}
 @media screen and (min-width:1200px){
 	footer{
 		.contactContainer{
 			padding-top: 25%;
+		}
+	}
+}
+@media screen and (min-width:1660px){
+	footer{
+		.contactContainer{
+			padding-top: 20%;
 		}
 	}
 }
