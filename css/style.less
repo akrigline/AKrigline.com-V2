@@ -34,7 +34,7 @@ SITEWIDE
 
 body{
 	@{font}:@body;
-	font-size:1em;
+	font-size:1.6em;
 	line-height:@lineheight;
 }
 
@@ -44,11 +44,18 @@ body{
 	}
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5,
+dt{
 	@{font}:@head;
 	line-height:@lineheight;
-	margin:0;
 }
+
+
+dt{
+	font-size:2em;
+	font-weight:300;
+}
+
 /*
 h1{
 	font-size:2em;
@@ -233,23 +240,69 @@ article{
 	section{
 		height:auto;
 	}
+
+	.small,
+	small{
+		color:#999;
+	}
 }
 
-dt{
-	font-size:1.2em;
+h4{
+	font-weight:700;
+	border-bottom: 1px solid #666;
 }
 
-dt ~ dt{
-	margin-top:1em;
-}
-
-dd.position{
-	font-size:1.8em;
-	font-weight:300;
+dd{
+	padding-left:2em;
 }
 
 dd.small{
 	margin-left:1em;
+}
+
+
+.row .row > div{
+	margin-bottom:2em;
+}
+
+
+.education{
+	margin-bottom: 1em;
+}
+
+.position{
+	& +dd{
+		font-weight: 700;
+	}
+}
+
+.previousExperience{
+	.position{
+		font-size:1.6em
+	}
+	div>div{
+		margin-bottom:1.8em;
+	}
+	dd{
+		padding-left: 1em;
+	}
+}
+
+
+@media screen and (max-width:459px){
+	#resume{
+		.col-xs-6{
+			width:100%;
+		}
+	}
+}
+
+@media screen and (min-width:460px) and (max-width:768px){
+	#resume{
+		.col-xs-6{
+			width:50%;
+		}
+	}
 }
 
 /********** Portfolio **********/
@@ -302,24 +355,6 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 
-  /*40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
-            transition-timing-function: ease-in;
-  }
-
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }*/
-
   100% {
     -webkit-transform: perspective(400px);
             transform: perspective(400px);
@@ -334,24 +369,6 @@ Copyright (c) 2014 Daniel Eden
             transition-timing-function: ease-out;
     opacity: 0;
   }
-
-  /*40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
-  }
-
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }*/
 
   100% {
     -webkit-transform: perspective(400px);
