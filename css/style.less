@@ -66,44 +66,6 @@ dt{
 	font-weight:300;
 }
 
-/*
-h1{
-	font-size:2em;
-	font-weight:340;
-}
-h2{
-	font-size:1.6em;
-	font-weight:300;
-}
-h3{
-	@{font}:@body;
-	font-size: 1em;
-	font-weight:300;
-}
-h4{
-	font-size:1em;
-	font-weight:300;
-}
-
-article{
-	p, dl, ul{
-		line-height:1.6em;
-	}
-}
-
-figcaption{
-	@{font}:@body;
-	font-weight:300;
-	font-size:.8em;
-	text-align:center;
-}
-
-a{
-	color:@color1;
-	text-decoration:none;
-}
-*/
-
 /********** Layout **********/
 
 html, body, .fullHeight, section{
@@ -125,7 +87,7 @@ article{
 }
 
 .top-nav{
-	height:4.1em;
+	height:3em;
 	border-radius: 0;
 	transition:all 300ms;
 	font-size: 1.2em;
@@ -142,17 +104,9 @@ article{
 			transition:background 300ms;
 
 			&.active{
-				background:@black;
-
-				&.res{
-					background:@white;
-					a{
-						color:@black;
-					}
-				}
-				&.port{
-					background:@black;
-					color:@white;
+				background:@white;
+				a{
+					color:@black;
 				}
 			}
 
@@ -171,11 +125,28 @@ article{
 
 	.brand{
 		display:block;
-		width:3em;
-		height:3em;
-		margin:.6em 0;
+		width:2em;
+		height:2em;
+		margin:.6em 0 .6em .6em;
 		background-image:url(../img/logo/white.png);
 		background-size:100%;
+	}
+}
+
+.navbar-toggle{
+	border:none;
+	.icon-bar{
+		background-color:#fff;
+	}
+}
+
+@media screen and (min-width:768px){
+	.top-nav{
+		height:4.1em;
+		.brand{
+			height:3em;
+			width:3em;
+		}
 	}
 }
 
@@ -198,7 +169,7 @@ article{
 	top:0;
 	left:0;
 	width:100%;
-	height:90%;
+	height:100%;
 	overflow:hidden;
 
 	.imagePanner{
@@ -420,69 +391,24 @@ dd.small{
 
 /********** Footer **********/
 footer{
-	height:100%;
 	background:rgba(0,0,0,0.3);
 	position:relative;
-	overflow: hidden;
+	padding:2em;
 	h1{
 		background:@black;
 		padding:.4em;
 		color:@white;
-		margin-top:1em;
+		margin-bottom:0;
 	}
-	.contactContainer{
-		position: absolute;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-		margin:auto;
-		height:0;
-		padding-top:90%;
+	form{
+		padding:1em;
 		background:#fff;
-		form{
-			position: absolute;
-			top:2em;
-			left:2em;
-			right:2em;
-			bottom:2em;
-		}
 	}
 }
 
-@media screen and (min-width:460px){
-	footer{
-		.contactContainer{
-			padding-top: 75%;
-		}
-	}
-}
 @media screen and (min-width:768px){
 	footer{
-		.contactContainer{
-			padding-top: 50%;
-		}
-	}
-}
-@media screen and (min-width:992px){
-	footer{
-		.contactContainer{
-			padding-top: 40%;
-		}
-	}
-}
-@media screen and (min-width:1200px){
-	footer{
-		.contactContainer{
-			padding-top: 25%;
-		}
-	}
-}
-@media screen and (min-width:1660px){
-	footer{
-		.contactContainer{
-			padding-top: 20%;
-		}
+		height:100%;
 	}
 }
 
