@@ -30,7 +30,7 @@ $(window).load(function() {
         var thePosD=destY-mouseCoordsY;
         var marginL=$imagePan_panning.css("marginLeft").replace("px", "");
         var marginT=$imagePan_panning.css("marginTop").replace("px", "");
-        var animSpeed=1000; //ease amount
+        var animSpeed=300; //ease amount
         var easeType="easeOutCubic";
         if(mouseCoordsX>destX || mouseCoordsY>destY){
             $imagePan_container.stop().animate({left: -thePosA-marginL, top: -thePosC-marginT}, animSpeed,easeType); //with easing
@@ -95,4 +95,7 @@ function() {
             speed: 7500
         });
     }, 3750 );
+
+    $('#scene').parallax({
+    });
 });

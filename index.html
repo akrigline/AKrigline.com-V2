@@ -24,20 +24,30 @@
 
 	<section id="intro">
 		<div class="imagePanner">
-			<header>
-			<div class="centerMe">
-				<div class="scrollThrough">
-					<h2>I am</h2>
-					<h1>Andrew Krigline, a Geek, a Designer, a Tinkerer</h1>
+		<ul id="scene" class="panning list-unstyled">
+			<li class="layer" data-depth="0.00">
+				<img src="img/krigline.jpg">
+			</li>
+			<li class="layer" data-depth="0.20"></li>
+			<li class="layer" data-depth="0.40">
+				<header>
+				<div class="centerMe">
+					<div class="scrollThrough">
+						<h2>I am</h2>
+						<h1>Andrew Krigline, a Geek, a Designer, a Tinkerer</h1>
+					</div>
+					<div class="scrollThroughOffset">
+						<h2>I design</h2>
+						<h1>Websites</h1>
+						<h1 class="hideme">User Interfaces, Experiences, Websites, Identities</h1>
+					</div>
 				</div>
-				<div class="scrollThroughOffset">
-					<h2>I design</h2>
-					<h1>Websites</h1>
-					<h1 class="hideme">User Interfaces, Experiences, Websites, Identities</h1>
-				</div>
-			</div>
-			</header>
-			<img src="img/krigline.jpg" class="panning">
+				</header>
+			</li>
+			<li class="layer" data-depth="0.60"><img src="layer4.png"></li>
+			<li class="layer" data-depth="0.80"><img src="layer5.png"></li>
+			<li class="layer" data-depth="1.00"><img src="layer6.png"></li>
+		</ul>
 		</div>
 	</section>
 	
@@ -345,6 +355,7 @@
 	<script src="js/vendor/jquery.scrollTo.min.js"></script>
 	<script src="js/vendor/jquery.localScroll.min.js"></script>
 	<script src="js/vendor/morphext.min.js"></script>
+	<script src="js/vendor/jquery.parallax.js"></script>
 	<script src="js/main.js"></script>
 
 
