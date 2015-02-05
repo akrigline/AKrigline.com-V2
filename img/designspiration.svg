@@ -1,0 +1,14 @@
+<?xml-stylesheet type="text/css" href="/svg-stylesheet.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="124" height="124" viewBox="0 0 124 124" version="1.1">
+  <title>
+    designspiration
+  </title>
+  <desc>
+    Created with Sketch.
+  </desc>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="designspiration" sketch:type="MSArtboardGroup" fill="#FFF">
+      <path d="M62.5 99C82.66 99 99 82.66 99 62.5 99 42.34 82.66 26 62.5 26 42.34 26 26 42.34 26 62.5 26 82.66 42.34 99 62.5 99ZM46.67 41.56L46.67 83.74 64.86 83.74C68.09 83.74 70.89 83.19 73.27 82.11 75.66 81.03 77.65 79.54 79.24 77.65 80.83 75.76 82.03 73.52 82.81 70.92 83.6 68.32 83.99 65.49 83.99 62.41 83.99 58.91 83.51 55.86 82.55 53.26 81.58 50.66 80.24 48.5 78.53 46.76 76.82 45.03 74.79 43.73 72.45 42.86 70.1 42 67.57 41.56 64.86 41.56L46.67 41.56ZM55.94 75.94L55.94 49.36 62.55 49.36C64.84 49.36 66.76 49.69 68.31 50.34 69.87 50.99 71.12 51.92 72.06 53.14 73.01 54.36 73.69 55.83 74.1 57.54 74.51 59.25 74.72 61.17 74.72 63.3 74.72 65.62 74.43 67.59 73.84 69.21 73.24 70.82 72.46 72.13 71.47 73.13 70.49 74.14 69.37 74.86 68.11 75.29 66.85 75.72 65.55 75.94 64.21 75.94L55.94 75.94Z" id="Oval-1" sketch:type="MSShapeGroup"/>
+    </g>
+  </g>
+</svg>

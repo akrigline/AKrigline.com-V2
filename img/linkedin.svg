@@ -1,0 +1,23 @@
+<?xml-stylesheet type="text/css" href="css/svg-stylesheet.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="124" height="124" viewBox="0 0 124 124" version="1.1">
+  <title>
+    linkedin
+  </title>
+  <desc>
+    Created with Sketch.
+  </desc>
+  <defs>
+    <path id="path-1" d="M0 0L72 0 72 71.94 0 71.94 0 0Z"/>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="linkedin" sketch:type="MSArtboardGroup">
+      <g id="linkedin12" sketch:type="MSLayerGroup" transform="translate(26.000000, 26.000000)" fill="#FFFFFF">
+        <mask id="mask-2" sketch:name="Clip 2">
+          <use xlink:href="#path-1"/>
+        </mask>
+        <g id="Clip-2"/>
+        <path d="M66.68 0L5.32 0C2.38 0 0 2.31 0 5.16L0 66.84C0 69.69 2.38 72 5.32 72L66.68 72C69.62 72 72 69.69 72 66.84L72 5.16C72 2.31 69.62 0 66.68 0L66.68 0ZM10.95 27.76L21.83 27.76 21.83 60.27 10.95 60.27 10.95 27.76ZM16.39 23.32L16.32 23.32C12.67 23.32 10.31 20.82 10.31 17.7 10.31 14.52 12.74 12.09 16.46 12.09 20.18 12.09 22.47 14.52 22.54 17.7 22.54 20.83 20.18 23.32 16.39 23.32L16.39 23.32ZM61.04 60.27L50.17 60.27 50.17 42.88C50.17 38.5 48.59 35.52 44.66 35.52 41.65 35.52 39.86 37.53 39.08 39.48 38.79 40.17 38.72 41.14 38.72 42.11L38.72 60.27 27.84 60.27C27.84 60.27 27.99 30.81 27.84 27.76L38.72 27.76 38.72 32.37C40.16 30.16 42.74 27 48.52 27 55.68 27 61.04 31.64 61.04 41.63L61.04 60.27ZM38.65 32.47C38.67 32.44 38.69 32.41 38.72 32.37L38.72 32.47 38.65 32.47Z" id="Fill-1" sketch:type="MSShapeGroup" mask="url(#mask-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

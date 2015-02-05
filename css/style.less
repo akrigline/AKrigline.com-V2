@@ -128,8 +128,9 @@ article{
 		width:2em;
 		height:2em;
 		margin:.6em 0 .6em .6em;
-		background-image:url(../img/logo/white.png);
-		background-size:100%;
+		img{
+			height:100%;
+		}
 	}
 }
 
@@ -140,11 +141,6 @@ article{
 	}
 }
 
-.navbar-collapse{
-	background:@color2;
-}
-
-
 @media screen and (min-width:768px){
 	.top-nav{
 		height:4.1em;
@@ -153,10 +149,8 @@ article{
 			width:3em;
 		}
 	}
-	.navbar-collapse{
-		background:none;
-	}
 }
+
 .is-sticky .top-nav{
 	background:@color2;
 }
@@ -185,10 +179,14 @@ article{
 		display: block;
 		.panning{
 			height:100%;
-			min-width:100%;
+			  width: -webkit-min-content;
+			  width: -moz-min-content;
+			  width: min-content;
 			.layer{
 				height:100%;
-				min-width:100%;
+				  width: -webkit-min-content;
+				  width: -moz-min-content;
+				  width: min-content;
 			}
 		}
 		img{
@@ -263,8 +261,6 @@ article{
 
 	section{
 		height:auto;
-		margin-top:1em;
-		margin-bottom:1em;
 	}
 
 	.small,
@@ -275,8 +271,7 @@ article{
 
 h4{
 	font-weight:700;
-	border-bottom: 1px solid #ccc;
-	margin-bottom:2em;
+	border-bottom: 1px solid #666;
 }
 
 dd{
@@ -410,14 +405,27 @@ dd.small{
 
 /********** Footer **********/
 footer{
-	background:rgba(0,0,0,0.3);
+	background:rgba(0,0,0,0.7);
 	position:relative;
 	padding:2em;
+	.social{
+		color:@white;
+		text-align:center;
+		padding:1em;
+		h2{
+			margin:0;
+		}
+		img{
+			height:3em;
+		}
+
+	}
 	h1{
 		background:@black;
 		padding:.4em;
 		color:@white;
 		margin-bottom:0;
+		margin-top:2em;
 	}
 	form{
 		padding:1em;
@@ -440,11 +448,8 @@ footer{
     display: inline-block;
 }
 
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2014 Daniel Eden
+/*
+Adapted from Animate.css - http://daneden.me/animate
 */
 
 .animated {
