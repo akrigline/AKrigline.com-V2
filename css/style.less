@@ -206,7 +206,6 @@ article{
 		color:#fff;
 		.centerMe{
 			margin-top:-25%;
-			//margin:-50% 50% 50% -50%;
 			background:rgba(255,255,255,1);
 			color:#000;
 		}
@@ -398,6 +397,13 @@ dd.small{
 @media screen and (min-width:768px){
 	#portfolio{
 		figure{
+			padding-top: 35%;
+		}
+	}
+}
+@media screen and (min-width:992px){
+	#portfolio{
+		figure{
 			padding-top: 25%;
 		}
 	}
@@ -407,7 +413,6 @@ dd.small{
 footer{
 	background:rgba(0,0,0,0.7);
 	position:relative;
-	padding:2em;
 	.social{
 		color:@white;
 		text-align:center;
@@ -416,6 +421,7 @@ footer{
 			margin:0;
 		}
 		img{
+			transition:all 200ms;
 			height:3em;
 		}
 
@@ -430,12 +436,37 @@ footer{
 	form{
 		padding:1em;
 		background:#fff;
+		input.form-control,
+		textarea.form-control{
+			background:transparent;
+			border-radius: 0;
+			border: 3px solid transparent;
+			transition:all 300ms;
+			box-shadow:none;
+		}
+		input.form-control:focus,
+		textarea.form-control:focus{
+			border: 3px solid @color2;
+			background:@black;
+			color:@white;
+			box-shadow: none;
+		}
+	}
+}
+
+.social{
+	a:hover{
+		img{
+		-webkit-transform: scale(1.2);
+				transform: scale(1.2);
+		}
 	}
 }
 
 @media screen and (min-width:768px){
 	footer{
 		height:100%;
+		padding:2em;
 	}
 }
 
