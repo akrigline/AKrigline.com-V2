@@ -330,43 +330,43 @@ dd.small {
   }
 }
 /********** Footer **********/
-footer {
+footer#contact {
   background: rgba(0, 0, 0, 0.7);
   position: relative;
 }
-footer .social {
+footer#contact .social {
   color: #ffffff;
   text-align: center;
   padding: 1em;
 }
-footer .social h2 {
+footer#contact .social h2 {
   margin: 0;
 }
-footer .social img {
+footer#contact .social img {
   transition: all 200ms;
   height: 3em;
 }
-footer h1 {
+footer#contact h1 {
   background: #000000;
   padding: .4em;
   color: #ffffff;
   margin-bottom: 0;
   margin-top: 2em;
 }
-footer form {
+footer#contact form {
   padding: 1em;
   background: #fff;
 }
-footer form input.form-control,
-footer form textarea.form-control {
+footer#contact form input.form-control,
+footer#contact form textarea.form-control {
   background: transparent;
   border-radius: 0;
   border: 3px solid transparent;
   transition: all 300ms;
   box-shadow: none;
 }
-footer form input.form-control:focus,
-footer form textarea.form-control:focus {
+footer#contact form input.form-control:focus,
+footer#contact form textarea.form-control:focus {
   border: 3px solid #000000;
   background: #000000;
   color: #ffffff;
