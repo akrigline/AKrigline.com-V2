@@ -97,5 +97,6 @@ function() {
     }, 3750 );
 
     $('#scene').parallax({
+        limitY: 0,
     });
 });

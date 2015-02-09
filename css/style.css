@@ -69,7 +69,7 @@ article {
   border: none;
   z-index: 1000;
   width: 100%;
-  background: rgba(39, 40, 34, 0.25);
+  background: rgba(0, 0, 0, 0.25);
 }
 .top-nav .navbar-nav li {
   transition: background 300ms;
@@ -92,8 +92,9 @@ article {
   width: 2em;
   height: 2em;
   margin: .6em 0 .6em .6em;
-  background-image: url(../img/logo/white.png);
-  background-size: 100%;
+}
+.top-nav .brand img {
+  height: 100%;
 }
 .navbar-toggle {
   border: none;
@@ -111,7 +112,7 @@ article {
   }
 }
 .is-sticky .top-nav {
-  background: #272822;
+  background: #000000;
 }
 /********** Intro **********/
 .welcome {
@@ -135,11 +136,15 @@ article {
 }
 #intro .imagePanner .panning {
   height: 100%;
-  min-width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 #intro .imagePanner .panning .layer {
   height: 100%;
-  min-width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 #intro .imagePanner img {
   height: 110%;
@@ -153,12 +158,12 @@ article {
   width: 50em;
   height: 10em;
   margin: auto;
-  color: #fff;
+  color: #ffffff;
 }
 #intro header .centerMe {
   margin-top: -25%;
   background: #ffffff;
-  color: #000;
+  color: #000000;
 }
 #intro header .scrollThrough h1,
 #intro header .scrollThroughOffset h1 {
@@ -181,7 +186,7 @@ article {
   padding: 2em;
 }
 #intro header .scrollThroughOffset {
-  background: #000;
+  background: #000000;
   padding: 2em;
   color: #fff;
 }
@@ -316,28 +321,65 @@ dd.small {
 }
 @media screen and (min-width: 768px) {
   #portfolio figure {
+    padding-top: 35%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #portfolio figure {
     padding-top: 25%;
   }
 }
 /********** Footer **********/
 footer {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   position: relative;
-  padding: 2em;
+}
+footer .social {
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+}
+footer .social h2 {
+  margin: 0;
+}
+footer .social img {
+  transition: all 200ms;
+  height: 3em;
 }
 footer h1 {
   background: #000000;
   padding: .4em;
   color: #ffffff;
   margin-bottom: 0;
+  margin-top: 2em;
 }
 footer form {
   padding: 1em;
   background: #fff;
 }
+footer form input.form-control,
+footer form textarea.form-control {
+  background: transparent;
+  border-radius: 0;
+  border: 3px solid transparent;
+  transition: all 300ms;
+  box-shadow: none;
+}
+footer form input.form-control:focus,
+footer form textarea.form-control:focus {
+  border: 3px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
+.social a:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 @media screen and (min-width: 768px) {
   footer {
     height: 100%;
+    padding: 2em;
   }
 }
 /* MorphText CSS */
@@ -347,11 +389,8 @@ footer form {
 .morphext > .animated {
   display: inline-block;
 }
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2014 Daniel Eden
+/*
+Adapted from Animate.css - http://daneden.me/animate
 */
 .animated {
   -webkit-animation-duration: .3s;
