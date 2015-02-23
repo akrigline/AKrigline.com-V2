@@ -14,7 +14,6 @@ SITEWIDE
 ----------*/
 /********** Type **********/
 body {
-  padding-top: 4.1em;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6em;
   line-height: 1.4em;
@@ -58,7 +57,7 @@ article {
 }
 /********** Navig **********/
 .sticky-wrapper {
-  height: 5em;
+  height: 4.8em;
 }
 .top-nav {
   height: 3em;
@@ -104,7 +103,7 @@ article {
 }
 @media screen and (min-width: 768px) {
   .top-nav {
-    height: 4.1em;
+    height: 4em;
   }
   .top-nav .brand {
     height: 3em;
@@ -116,7 +115,7 @@ article {
 }
 /********** Intro **********/
 .welcome {
-  height: 90%;
+  height: 95%;
   margin-bottom: -5.3em;
   z-index: -2;
 }
