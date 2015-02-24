@@ -411,11 +411,11 @@ Portfolio Single Page
   padding-top: 133.33333333%;
 }
 .portfolio-single .device-tablet iframe {
-  -moz-transform: scale(0.425);
+  -moz-transform: scale(0.375);
   -moz-transform-origin: 0 0;
-  -o-transform: scale(0.425);
+  -o-transform: scale(0.375);
   -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.425);
+  -webkit-transform: scale(0.375);
   -webkit-transform-origin: 0 0;
   width: 991px;
   height: 1321px;
@@ -424,11 +424,11 @@ Portfolio Single Page
   padding-top: 56.25%;
 }
 .portfolio-single .device-desktop iframe {
-  -moz-transform: scale(0.25);
+  -moz-transform: scale(0.31);
   -moz-transform-origin: 0 0;
-  -o-transform: scale(0.25);
+  -o-transform: scale(0.31);
   -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.25);
+  -webkit-transform: scale(0.31);
   -webkit-transform-origin: 0 0;
   width: 1200px;
   height: 675px;
