@@ -104,3 +104,29 @@ if (document.getElementById('home')) {
     });
 
 };
+
+
+/*
+Ask for Device Width
+and Iframe width
+Divide Device by iframe
+apply decimal to transform
+*/
+function iframeWidth() {
+    $device = $('.device');
+    $iframe = $('.viewport iframe');
+
+    var deviceWidth = $device.width();
+    var frameWidth = $iframe.width();
+    var scale = deviceWidth / frameWidth;
+
+    $iframe.css({
+        "// zoom": scale,
+        "-moz-transform": "scale(" + scale + ")",
+        "-o-transform": "scale(" + scale + ")",
+        "-webkit-transform": "scale(" + scale + ")",
+    });
+};
+
+$(document).ready( iframeWidth );
+$(window).resize( iframeWidth );
