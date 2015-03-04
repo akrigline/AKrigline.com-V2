@@ -75,7 +75,7 @@ if (document.getElementById('home')) {
         $('.top-nav').localScroll({
             duration:500,
             hash:true,
-            offset: -68
+            offset: -65
         });
 
         //Initialize Morphext
