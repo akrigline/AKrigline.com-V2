@@ -271,15 +271,20 @@ Home Page
 
 	header{
 		position:absolute;
-		
+
+		&.name{
+			left:33%;
+			top:20%;
+		}
+
 		&.iam{
-			left:15%;
+			left:10%;
 			top:10%;
 		}
 
 		&.design{
-			right:5%;
-			top:20%;
+			right:9%;
+			top:40%;
 		}
 
 		min-width:20em;
@@ -287,13 +292,11 @@ Home Page
 		margin:auto;
 		color:@white;
 
-		.scrollThrough,
-		.scrollThroughOffset{
-			text-align:center;
-			border-radius:.3em;
-			padding:2em;
+		text-align:center;
+		border-radius:.3em;
+		padding:2em;
 
-			.faded(@black, 75%);
+		.faded(@black, 75%);
 
 			h1{
 				font-size:3em;
@@ -306,7 +309,6 @@ Home Page
 			h1, h2{
 				margin:0;
 			}
-		}
 	}
 }
 
