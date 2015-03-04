@@ -51,7 +51,7 @@ if (document.getElementById('home')) {
 
     });
      
-    $(window).resize(function() {
+    $('body').resize(function() {
         $(window).unbind("mousemove");
         $imagePan_container.css("top",0).css("left",0);
         $(window).load();

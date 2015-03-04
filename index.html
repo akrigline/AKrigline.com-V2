@@ -14,39 +14,36 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<link rel="stylesheet" type="text/less" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script src="js/vendor/picturefill.min.js"></script>
-	<script src="js/less.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".top-nav" data-offset="70" id="home">
 
 	<section id="intro">
 		<div class="imagePanner">
 		<ul id="scene" class="panning list-unstyled">
-			<li class="layer" data-depth="0.00">
+			<li class="layer base" data-depth="0.00">
 				<img src="img/multi-me.jpg">
 			</li>
-			<li class="layer" data-depth="0.20"></li>
-			<li class="layer" data-depth="0.40">
-				<header>
-				<div class="centerMe">
-					<div class="scrollThrough">
-						<h2>I am</h2>
-						<h1>Andrew Krigline, a Geek, a Designer, a Tinkerer</h1>
-					</div>
+			<li class="layer" data-depth="0.25">
+				<header class="design">
 					<div class="scrollThroughOffset">
 						<h2>I design</h2>
 						<h1>Websites</h1>
 						<h1 class="hideme">User Interfaces, Experiences, Websites, Identities</h1>
 					</div>
-				</div>
 				</header>
 			</li>
-			<li class="layer" data-depth="0.60"><img src="layer4.png"></li>
-			<li class="layer" data-depth="0.80"><img src="layer5.png"></li>
-			<li class="layer" data-depth="1.00"><img src="layer6.png"></li>
+			<li class="layer" data-depth="0.25">
+				<header class="iam">
+					<div class="scrollThrough">
+						<h2>I am</h2>
+						<h1>Andrew Krigline, a Geek, a Designer, a Tinker</h1>
+					</div>
+				</header>
+			</li>
 		</ul>
 		</div>
 	</section>
