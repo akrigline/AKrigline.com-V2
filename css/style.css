@@ -403,7 +403,8 @@ Portfolio Single Page
 .portfolio-single .device-phone {
   background: url(../img/svg/iphone-port.svg) center;
   background-size: 100% 100%;
-  padding: 20% 16% 19% 17%;
+  padding: 11.5% 1.8% 11% 2.25%;
+  width: 30%;
 }
 .portfolio-single .device-phone .viewport {
   padding-top: 177.7777777%;
@@ -418,7 +419,8 @@ Portfolio Single Page
 .portfolio-single .device-tablet {
   background: url(../img/svg/ipad-port.svg) center;
   background-size: 100% 100%;
-  padding: 13% 5% 13% 5%;
+  padding: 11.5% 2.25% 11.5% 2.25%;
+  width: 40%;
 }
 .portfolio-single .device-tablet .viewport {
   padding-top: 133.33333333%;
