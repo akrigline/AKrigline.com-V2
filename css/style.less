@@ -216,7 +216,7 @@ footer#contact{
 		padding:.4em;
 		color:@white;
 		margin-bottom:0;
-		margin-top:2em;
+		margin-top:0;
 	}
 	form{
 		padding:1em;
@@ -256,6 +256,9 @@ footer#contact{
 	footer#contact{
 		height:100%;
 		padding:2em;
+		form{
+			margin-top:4em;
+		}
 	}
 }
 
@@ -498,44 +501,62 @@ Portfolio Single Page
 	.device{
 		width:90%;
 		margin:0 auto;
+		.viewport{
+			width:100%;
+		}
+		iframe{
+			border:none;
+		}
 	}
 
 	.device-phone{
+		background: url(../img/svg/iphone-port.svg) center;
+		background-size:100% 100%;
+		padding: 20% 16% 19% 17%;
+
 		.viewport{
 			padding-top:177.7777777%;
 		}
 		iframe{
-		    -moz-transform-origin: 0 0;
-		    -o-transform-origin: 0 0;
-		    -webkit-transform-origin: 0 0;
+	    -moz-transform-origin: 0 0;
+	    -o-transform-origin: 0 0;
+	    -webkit-transform-origin: 0 0;
 			width:375px;
 			height:667px;
 		}
 	}
 
 	.device-tablet{
+		background: url(../img/svg/ipad-port.svg) center;
+		background-size:100% 100%;
+		padding: 13% 5% 13% 5%;
+
 		.viewport{
 			padding-top:133.33333333%;
 		}
 		iframe{
-		    -moz-transform-origin: 0 0;
-		    -o-transform-origin: 0 0;
-		    -webkit-transform-origin: 0 0;
+	    -moz-transform-origin: 0 0;
+	    -o-transform-origin: 0 0;
+	    -webkit-transform-origin: 0 0;
 			width:991px;
 			height:1321px;
 		}
 	}
 
 	.device-desktop{
+		background: url(../img/svg/mbp.svg) center;
+		background-size:100% 100%;
+		padding: 12.5% 11% 15% 11%;
+
 		.viewport{
-			padding-top:56.25%;
+			padding-top:62.53%;
 		}
 		iframe{
-		    -moz-transform-origin: 0 0;
-		    -o-transform-origin: 0 0;
-		    -webkit-transform-origin: 0 0;
+	    -moz-transform-origin: 0 0;
+	    -o-transform-origin: 0 0;
+	    -webkit-transform-origin: 0 0;
 			width:1200px;
-			height:675px;
+			height:750px;
 		}
 	}
 	.viewport{
