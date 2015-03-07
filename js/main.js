@@ -6,11 +6,12 @@ if (document.getElementById('home')) {
     http://manos.malihu.gr/jquery-image-panning/
     */
 
-    $(window).load(function() {
+    function imageScroll() {
         //$outer_container=$("#intro");
         $imagePan_panning=$("#intro .panning");
         $imagePan=$("#intro");
         $imagePan_container=$("#intro .imagePanner");
+        $pseudoImage=$('.welcome');
      
         //$imagePan_panning.css("margin-top",($imagePan.height()-$imagePan_panning.height())/2+"px");
         containerWidth=$imagePan.width();
@@ -45,26 +46,26 @@ if (document.getElementById('home')) {
 
         //$imagePan_panning.css("margin-left",($imagePan.width()-$imagePan_panning.width())/2).css("margin-top",($imagePan.height()-$imagePan_panning.height())/2);
      
-        $(window).bind("mousemove", function(event){
+        $pseudoImage.bind("mousemove", function(event){
             MouseMove(event);
         });
 
-    });
-     
-    $('body').resize(function() {
-        $(window).unbind("mousemove");
-        $imagePan_container.css("top",0).css("left",0);
-        $(window).load();
-    });
+    };
+
+    $(window).load(imageScroll);
 
     // Reset ScrollSpy on Resize
-    $('body').resize(function () {
-        var $spy = $(this).scrollspy('refresh')
-    });
+    $(window).resize(
 
-    $(document).ready( 
-    function() {
-    //Initialize Sticky.js
+        function () {
+            var $spy = $(this).scrollspy('refresh');
+            $pseudoImage.unbind("mousemove");
+        },
+        imageScroll
+    );
+
+    $(document).ready( function() {
+        //Initialize Sticky.js
         $(".top-nav").sticky({
             topSpacing:0,
             getWidthFrom:'#intro',
@@ -84,7 +85,7 @@ if (document.getElementById('home')) {
             separator: ",",
             speed: 7500
         });
-
+        //Set up Delayed Morphext
         setTimeout( function (){
             $(".scrollThroughOffset h1").css('display', 'none');
             $(".scrollThroughOffset .hideme").css('display', 'inline-block');
@@ -98,7 +99,10 @@ if (document.getElementById('home')) {
             });
         }, 3750 );
 
+        //Initialize Parllax
         $('#scene').parallax({
+            relativeInput: true,
+            clipRelativeInput: true
         });
     });
 

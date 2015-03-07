@@ -38,7 +38,6 @@ h4 {
   font-weight: 100;
   color: rgba(0, 0, 0, 0.5);
   letter-spacing: .02em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 dl {
   font-size: 1.2em;
@@ -290,6 +289,8 @@ Home Page
 }
 #resume section {
   height: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 #resume .small,
 #resume small {
