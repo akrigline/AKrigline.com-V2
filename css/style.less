@@ -120,20 +120,18 @@ article{
 			transition:background 300ms;
 
 			&.active{
-				background:@white;
 				a{
-					color:@color2;
+					color:@white
 				}
 			}
-
 			a{
 				line-height: 2.3em;
-				color:@white;
-			}
 
-			&:hover{
-				a{
-					color:#333;
+				color:fadeout(@white, 50%);
+				&:hover,
+				&:focus{
+					background-color:transparent;
+					color:fadeout(@white, 25%);
 				}
 			}
 		}
@@ -184,6 +182,59 @@ article{
 			height:3em;
 		}
 	}
+
+	/*** Navigation Effects Courtesy of Mary Lou @ Codrops:
+	http://tympanus.net/codrops/2013/08/06/creative-link-effects/ ***/
+	.cl-effect-1 a::before,
+	.cl-effect-1 a::after {
+		color: fadeout(@white, 50%);
+		font-weight: 300;
+		font-size: 1.2em;
+		display: inline-block;
+		opacity: 0;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+		-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+		transition: transform 0.3s, opacity 0.2s;
+	}
+
+	.cl-effect-1 .active a::before,
+	.cl-effect-1 .active a::after{
+		color: @white;
+	}
+
+	.cl-effect-1 a:hover::before,
+	.cl-effect-1 a:hover::after{
+		color:fadeout(@white, 25%);
+	}
+
+	.cl-effect-1 a::before {
+		margin-right: 10px;
+		content: '{';
+		-webkit-transform: translateX(10px);
+		-moz-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+
+	.cl-effect-1 a::after {
+		margin-left: 10px;
+		content: '}';
+		-webkit-transform: translateX(-10px);
+		-moz-transform: translateX(-10px);
+		transform: translateX(-10px);
+	}
+
+	.cl-effect-1 .active a::before,
+	.cl-effect-1 .active a::after,
+	.cl-effect-1 a:hover::before,
+	.cl-effect-1 a:hover::after,
+	.cl-effect-1 a:focus::before,
+	.cl-effect-1 a:focus::after {
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+		-moz-transform: translateX(0px);
+		transform: translateX(0px);
+	}
+
 }
 
 .is-sticky .top-nav{
@@ -195,7 +246,6 @@ article{
 		background:@black;
 	}
 }
-
 
 /********** Footer **********/
 footer#contact{
@@ -257,8 +307,8 @@ footer#contact{
 
 @media screen and (min-width:768px){
 	footer#contact{
-		height:100%;
-		padding:2em;
+		min-height:100%;
+		padding:5em 2em;
 		form{
 			margin-top:4em;
 		}
@@ -377,12 +427,16 @@ Home Page
 	small{
 		color:#999;
 	}
+
+	hr{
+		margin:0;
+		padding:1.5em 0 0;
+	}
 }
 
 .row .row > div{
 	margin-bottom:2em;
 }
-
 
 .education{
 	margin-bottom: 1em;

@@ -80,18 +80,17 @@ article {
 .top-nav .navbar-nav li {
   transition: background 300ms;
 }
-.top-nav .navbar-nav li.active {
-  background: #ffffff;
-}
 .top-nav .navbar-nav li.active a {
-  color: #000000;
+  color: #ffffff;
 }
 .top-nav .navbar-nav li a {
   line-height: 2.3em;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
 }
-.top-nav .navbar-nav li:hover a {
-  color: #333;
+.top-nav .navbar-nav li a:hover,
+.top-nav .navbar-nav li a:focus {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.75);
 }
 .top-nav .brand {
   display: block;
@@ -132,6 +131,52 @@ article {
   }
   .top-nav .brand {
     height: 3em;
+  }
+  /*** Navigation Effects Courtesy of Mary Lou @ Codrops:
+	http://tympanus.net/codrops/2013/08/06/creative-link-effects/ ***/
+  .cl-effect-1 a::before,
+  .cl-effect-1 a::after {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    font-size: 1.2em;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+  .cl-effect-1 .active a::before,
+  .cl-effect-1 .active a::after {
+    color: #ffffff;
+  }
+  .cl-effect-1 a:hover::before,
+  .cl-effect-1 a:hover::after {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '{';
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  .cl-effect-1 a::after {
+    margin-left: 10px;
+    content: '}';
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  .cl-effect-1 .active a::before,
+  .cl-effect-1 .active a::after,
+  .cl-effect-1 a:hover::before,
+  .cl-effect-1 a:hover::after,
+  .cl-effect-1 a:focus::before,
+  .cl-effect-1 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
 .is-sticky .top-nav {
@@ -193,8 +238,8 @@ footer#contact form textarea.form-control:focus {
 }
 @media screen and (min-width: 768px) {
   footer#contact {
-    height: 100%;
-    padding: 2em;
+    min-height: 100%;
+    padding: 5em 2em;
   }
   footer#contact form {
     margin-top: 4em;
@@ -295,6 +340,10 @@ Home Page
 #resume .small,
 #resume small {
   color: #999;
+}
+#resume hr {
+  margin: 0;
+  padding: 1.5em 0 0;
 }
 .row .row > div {
   margin-bottom: 2em;

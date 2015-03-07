@@ -54,9 +54,10 @@ if (document.getElementById('home')) {
 
     $(window).load(imageScroll);
 
+
+
     // Reset ScrollSpy on Resize
     $(window).resize(
-
         function () {
             var $spy = $(this).scrollspy('refresh');
             $pseudoImage.unbind("mousemove");
@@ -65,12 +66,27 @@ if (document.getElementById('home')) {
     );
 
     $(document).ready( function() {
+        //Initialize Parllax
+        $('#scene').parallax({
+            relativeInput: true,
+            clipRelativeInput: true
+        });
+
         //Initialize Sticky.js
         $(".top-nav").sticky({
             topSpacing:0,
             getWidthFrom:'#intro',
             responsiveWidth:true
         });
+
+        /* Make parallax stop once sticky takes effect */
+        $('.top-nav').on('sticky-start', function(){
+            $('#scene').parallax('disable');
+        });
+        $('.top-nav').on('sticky-end', function(){
+            $('#scene').parallax('enable');
+        });
+
 
         // Initialize LocalScroll
         $('.top-nav').localScroll({
@@ -99,11 +115,6 @@ if (document.getElementById('home')) {
             });
         }, 3750 );
 
-        //Initialize Parllax
-        $('#scene').parallax({
-            relativeInput: true,
-            clipRelativeInput: true
-        });
     });
 
 };
