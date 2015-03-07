@@ -45,7 +45,7 @@ if (document.getElementById('home')) {
         }
 
         //$imagePan_panning.css("margin-left",($imagePan.width()-$imagePan_panning.width())/2).css("margin-top",($imagePan.height()-$imagePan_panning.height())/2);
-     
+    
         $pseudoImage.bind("mousemove", function(event){
             MouseMove(event);
         });
@@ -56,7 +56,7 @@ if (document.getElementById('home')) {
 
 
 
-    // Reset ScrollSpy on Resize
+    // Reset ScrollSpy & imageScroll on Resize
     $(window).resize(
         function () {
             var $spy = $(this).scrollspy('refresh');
@@ -79,15 +79,6 @@ if (document.getElementById('home')) {
             responsiveWidth:true
         });
 
-        /* Make parallax stop once sticky takes effect */
-        $('.top-nav').on('sticky-start', function(){
-            $('#scene').parallax('disable');
-        });
-        $('.top-nav').on('sticky-end', function(){
-            $('#scene').parallax('enable');
-        });
-
-
         // Initialize LocalScroll
         $('.top-nav').localScroll({
             duration:500,
@@ -101,6 +92,7 @@ if (document.getElementById('home')) {
             separator: ",",
             speed: 7500
         });
+        
         //Set up Delayed Morphext
         setTimeout( function (){
             $(".scrollThroughOffset h1").css('display', 'none');
@@ -117,6 +109,13 @@ if (document.getElementById('home')) {
 
     });
 
+    /* Make parallax stop once sticky takes effect */
+    $('.top-nav').on('sticky-start', function(){
+        $('#scene').parallax('disable');
+    });
+    $('.top-nav').on('sticky-end', function(){
+        $('#scene').parallax('enable');
+    });
 };
 
 
