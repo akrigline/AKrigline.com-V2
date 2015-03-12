@@ -342,11 +342,16 @@ Home Page
   color: #999;
 }
 #resume hr {
-  margin: 0;
-  padding: 1.5em 0 0;
+  margin: 1em 0 2em;
+  border-color: rgba(0, 0, 0, 0.25);
+  padding: 0;
 }
 .row .row > div {
   margin-bottom: 2em;
+}
+.icon-resume {
+  height: 6em;
+  margin-bottom: -1.4em;
 }
 .education {
   margin-bottom: 1em;
@@ -365,6 +370,11 @@ Home Page
 @media screen and (min-width: 460px) and (max-width: 768px) {
   #resume .col-xs-6 {
     width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #resume hr {
+    margin: 3em 0;
   }
 }
 /********** Portfolio **********/
@@ -443,6 +453,7 @@ Portfolio Single Page
 .portfolio-single .device {
   width: 90%;
   margin: 0 auto;
+  transition: opacity 600ms;
 }
 .portfolio-single .device .viewport {
   width: 100%;
@@ -509,6 +520,36 @@ Portfolio Single Page
   bottom: 0;
   right: 0;
   left: 0;
+}
+.portfolio-single .buttons-devices {
+  text-align: center;
+}
+.portfolio-single .btn {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.5);
+}
+.portfolio-single .btn img {
+  opacity: 0.5;
+}
+.portfolio-single .btn img.desktop {
+  height: 5em;
+}
+.portfolio-single .btn img.tablet {
+  height: 4em;
+}
+.portfolio-single .btn img.mobile {
+  height: 3em;
+}
+.portfolio-single .btn.active {
+  box-shadow: none;
+  color: #000000;
+}
+.portfolio-single .btn.active img {
+  opacity: 1;
+}
+.portfolio-single .btn:focus {
+  box-shadow: none;
+  outline: none;
 }
 /* MorphText CSS */
 .morphext > span {

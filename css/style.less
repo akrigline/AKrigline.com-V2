@@ -429,13 +429,19 @@ Home Page
 	}
 
 	hr{
-		margin:0;
-		padding:1.5em 0 0;
+		margin:1em 0 2em;
+		border-color: fadeout(@black, 75%);
+		padding:0;
 	}
 }
 
 .row .row > div{
 	margin-bottom:2em;
+}
+
+.icon-resume{
+	height:6em;
+	margin-bottom:-1.4em;
 }
 
 .education{
@@ -466,6 +472,14 @@ Home Page
 	#resume{
 		.col-xs-6{
 			width:50%;
+		}
+	}
+}
+
+@media screen and (min-width: 768px){
+	#resume{
+		hr{
+			margin:3em 0;
 		}
 	}
 }
@@ -560,6 +574,7 @@ Portfolio Single Page
 	.device{
 		width:90%;
 		margin:0 auto;
+		transition: opacity 600ms;
 		.viewport{
 			width:100%;
 		}
@@ -635,6 +650,37 @@ Portfolio Single Page
 		right:0;
 		left:0;
 	}
+	.buttons-devices{
+		text-align:center;
+	}
+	.btn{
+		background:transparent;
+		color: fadeout(@black, 50%);
+		img{
+			opacity:0.5;
+			&.desktop{
+				height:5em;
+			}
+			&.tablet{
+				height:4em;
+			}
+			&.mobile{
+				height:3em;
+			}
+		}
+		&.active{
+			box-shadow:none;
+			color:@black;
+			img{
+				opacity: 1;
+			}
+		}
+		&:focus{
+			box-shadow:none;
+			outline:none;
+		}
+	}
+
 }
 
 

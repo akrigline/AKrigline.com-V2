@@ -144,58 +144,53 @@ function iframeWidth() {
 $(document).ready( iframeWidth );
 $(window).resize( iframeWidth );
 
-$device = $('.device');
-
 $('#iphone-toggle').click( function(){
-    if ( $device.hasClass('device-desktop') ) {
+    $('.btn-device.active').removeClass('active');
+    $(this).addClass('active');
 
+    if ( $device.hasClass('device-desktop') ) {
         $device.removeClass('device-desktop');
         $device.addClass('device-phone');
         iframeWidth();
 
     } else if ( $device.hasClass('device-tablet') ) {
-
         $device.removeClass('device-tablet');
         $device.addClass('device-phone');
         iframeWidth();
-
-    } else {
 
     }
 });
 
 $('#ipad-toggle').click( function(){
+    $('.btn-device.active').removeClass('active');
+    $(this).addClass('active');
+    
     if ( $device.hasClass('device-desktop') ) {
-
         $device.removeClass('device-desktop');
         $device.addClass('device-tablet');
         iframeWidth();
 
     } else if ( $device.hasClass('device-phone') ) {
-
         $device.removeClass('device-phone');
         $device.addClass('device-tablet');
         iframeWidth();
-
-    } else {
 
     }
 });
 
 $('#mbp-toggle').click( function(){
+    $('.btn-device.active').removeClass('active');
+    $(this).addClass('active');
+    
     if ( $device.hasClass('device-tablet') ) {
-
         $device.removeClass('device-tablet');
         $device.addClass('device-desktop');
         iframeWidth();
 
     } else if ( $device.hasClass('device-phone') ) {
-
         $device.removeClass('device-phone');
         $device.addClass('device-desktop');
         iframeWidth();
-
-    } else {
 
     }
 });
