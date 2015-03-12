@@ -360,26 +360,49 @@ Home Page
 			height:110%;
 		}
 	}
-
+	.overlay{
+		z-index: 1000;
+	}
 	header{
 		position:absolute;
 
 		&.name{
-			left:33%;
-			top:20%;
+			left:36%;
+			top:-10%;
+			width:15%;
+			background:fadeout(@black, 25%);
+			color:@white;
+			padding:0;
+			height:50%;
+			.centerme{
+				position:absolute;
+				bottom:5em;
+				width:100%;
+			}
+			img{
+				height:7em;
+				margin-bottom:1em;
+			}
+			h4{
+				color:@white;
+			}
 		}
-
 		&.iam{
 			left:10%;
 			top:10%;
 		}
 
 		&.design{
-			right:9%;
-			top:40%;
+			right:16%;
+			top:45%;
 		}
 
-		min-width:20em;
+		&.lowerFace{
+			left:29%;
+			top:48%;
+		}
+
+		//min-width:20em;
 		transition: all 300ms;
 		margin:auto;
 		color:@white;
