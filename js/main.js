@@ -88,12 +88,12 @@ if (document.getElementById('home')) {
         });
 
         //Initialize Morphext
-        $(".scrollThrough h1").Morphext({
+        $(".scrollThrough h3").Morphext({
             animation: "flipInX",
             separator: ",",
             speed: 7500
         });
-        
+        /*
         //Set up Delayed Morphext
         setTimeout( function (){
             $(".scrollThroughOffset h1").css('display', 'none');
@@ -120,7 +120,7 @@ if (document.getElementById('home')) {
                 speed: 7500
             });
         }, 2250 );
-
+*/
     });
 
     /* Make parallax stop once sticky takes effect */

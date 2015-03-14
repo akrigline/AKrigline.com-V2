@@ -57,6 +57,14 @@ h2{
 	font-weight:300;
 }
 
+h3{
+	font-weight: 600;
+	font-size:1.4em;
+	text-transform: uppercase;
+	margin:0;
+	line-height:2em;
+}
+
 h4{
 	text-transform: uppercase;
 	font-weight:100;
@@ -359,6 +367,13 @@ Home Page
 		img{
 			height:110%;
 		}
+
+		.scrollThrough{
+			h3{
+				margin-top:.6em;
+				-webkit-backface-visibility: hidden;
+			}
+		}
 	}
 	.overlay{
 		z-index: 1000;
@@ -370,13 +385,14 @@ Home Page
 			left:36%;
 			top:-10%;
 			width:15%;
-			background:fadeout(@black, 25%);
+			background: fadeout(@black, 10%);
 			color:@white;
 			padding:0;
 			height:50%;
+			border-radius:.3em;
 			.centerme{
 				position:absolute;
-				bottom:5em;
+				bottom:2em;
 				width:100%;
 			}
 			img{
@@ -413,17 +429,15 @@ Home Page
 
 		.faded(@black, 75%);
 
-			h1{
-				font-size:3em;
-			}
-			h1, span{
-				@{font}:@head;
-				font-weight:100;
-				line-height:1em;
-			}
-			h1, h2{
-				margin:0;
-			}
+		h1{
+			font-size:3em;
+			@{font}:@head;
+			font-weight:100;
+			line-height:1em;
+		}
+		h1, h2{
+			margin:0;
+		}
 	}
 }
 
