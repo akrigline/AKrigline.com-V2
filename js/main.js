@@ -139,6 +139,10 @@ and Iframe width
 Divide Device by iframe
 apply decimal to transform
 */
+$('.viewport iframe').load( function(){
+    $('.viewport').removeClass('loading');
+});
+
 function iframeWidth() {
     $device = $('.device');
     $iframe = $('.viewport iframe');

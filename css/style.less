@@ -31,7 +31,7 @@ SITEWIDE
 /********** Type **********/
 
 body{
-	//padding-top:4.1em;
+	padding-top:4.1em;
 	@{font}:@body;
 	font-size:1.6em;
 	line-height:@lineheight;
@@ -99,6 +99,13 @@ html, body, .fullHeight, section{
 /*-------------------------------
 Universal Elements
 ----------*/
+
+.loading{
+	background-color: lighten(@black,25%);
+	background-image: url(../img/svg/loading.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 article{
 	min-height:100%;
@@ -315,7 +322,6 @@ footer#contact{
 
 @media screen and (min-width:768px){
 	footer#contact{
-		min-height:100%;
 		padding:5em 2em;
 		form{
 			margin-top:4em;
@@ -492,8 +498,8 @@ Home Page
 }
 
 .previousExperience{
-	div>div{
-		margin-bottom:1.8em;
+	.margin-none{
+		margin-bottom:0 !important;
 	}
 }
 
@@ -718,6 +724,12 @@ Portfolio Single Page
 		}
 	}
 
+}
+
+.single footer{
+	background:lighten(@black, 75%);
+	margin-top:5em;
+	padding-top:2em;
 }
 
 
