@@ -71,7 +71,10 @@ h4{
 	.colorFade(@black, 50%);
 	letter-spacing: .02em;
 }
-
+p{
+	font-size:1em;
+	line-height:1.8em;
+}
 hr{
 	//border-bottom: 1px solid rgba(0,0,0,0.5);
 }
@@ -87,6 +90,12 @@ dt{
 
 dd{
 	line-height:2em;
+}
+
+@media screen and (min-width:768px){
+	p{
+		font-size:1.2em;
+	}
 }
 
 
@@ -114,7 +123,13 @@ article{
 /********** Navigation **********/
 
 .sticky-wrapper{
-	height:4.8em;
+	height:3.6em;
+}
+
+@media screen and (min-width:768px){
+	.sticky-wrapper{
+		height:4.8em;
+	}
 }
 
 .top-nav{
@@ -151,7 +166,6 @@ article{
 			}
 		}
 	}
-
 	.brand{
 		display:block;
 		width:auto;
@@ -255,13 +269,20 @@ article{
 
 }
 
-.is-sticky .top-nav{
+.is-sticky .top-nav,
+.navbar-collapse{
 	background:@color2;
 }
 
 .single{
 	.top-nav{
 		background:@black;
+	}
+}
+
+@media screen and (min-width:768px){
+	.navbar-collapse{
+		background:transparent;
 	}
 }
 
@@ -405,21 +426,21 @@ Home Page
 		position:absolute;
 
 		&.name{
-			left:36%;
-			top:-10%;
-			width:15%;
+			left:26%;
+			top:0;
+			width:25%;
 			background: fadeout(@black, 10%);
 			color:@white;
 			padding:0;
-			height:50%;
-			border-radius:.3em;
+			height:40%;
+			border-radius:0 0 .3em .3em;
 			.centerme{
 				position:absolute;
 				bottom:2em;
 				width:100%;
 			}
 			img{
-				height:7em;
+				height:3em;
 				margin-bottom:1em;
 			}
 			h4{
@@ -451,6 +472,16 @@ Home Page
 
 .hideme{
 	display:none;
+}
+
+@media screen and (min-width:768px){
+	#intro header.name{
+		left:36%;
+		width:15%;
+		img{
+			height:7em;
+		}
+	}
 }
 
 /********** About **********/
