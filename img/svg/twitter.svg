@@ -1,14 +1,11 @@
-<?xml-stylesheet type="text/css" href="css/svg-stylesheet.css" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="124" height="124" viewBox="0 0 124 124" version="1.1">
-  <title>
-    twitter
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-    <g id="twitter" sketch:type="MSArtboardGroup" fill="#000000">
-      <path d="M100.89 42.59C98.29 43.74 95.48 44.54 92.54 44.89 95.55 43.09 97.84 40.24 98.94 36.84 96.13 38.5 93.01 39.72 89.68 40.36 87.05 37.55 83.26 35.78 79.08 35.78 71.06 35.78 64.55 42.29 64.55 50.31 64.55 51.46 64.68 52.56 64.92 53.62 52.83 53.01 42.12 47.24 34.94 38.44 33.69 40.58 32.97 43.09 32.97 45.75 32.97 50.79 35.55 55.25 39.44 57.84 37.06 57.78 34.83 57.11 32.87 56.02L32.87 56.2C32.87 63.25 37.88 69.13 44.52 70.47 43.31 70.79 42.01 70.97 40.7 70.97 39.77 70.97 38.86 70.88 37.95 70.71 39.81 76.49 45.17 80.68 51.53 80.81 46.55 84.7 40.28 87.02 33.47 87.02 32.3 87.02 31.16 86.95 30.01 86.82 36.45 90.95 44.09 93.35 52.31 93.35 79.04 93.35 93.66 71.2 93.66 52L93.62 50.12C96.48 48.06 98.94 45.51 100.89 42.59L100.89 42.59Z" id="social19" sketch:type="MSShapeGroup" fill="#FFF"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 236.3 239.3" enable-background="new 0 0 236.3 239.3" xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M173.4,90.4c-4.1,1.8-8.6,3.1-13.2,3.6c4.8-2.8,8.4-7.4,10.1-12.7
+	c-4.4,2.6-9.4,4.6-14.6,5.6c-4.2-4.4-10.2-7.3-16.8-7.3c-12.7,0-23,10.3-23,23c0,1.8,0.2,3.6,0.6,5.2c-19.1-1-36.1-10.1-47.4-24
+	c-2,3.4-3.1,7.4-3.1,11.6c0,8,4.1,15,10.2,19.1c-3.8-0.1-7.3-1.2-10.4-2.9v0.3c0,11.1,7.9,20.5,18.4,22.6c-1.9,0.5-4,0.8-6.1,0.8
+	c-1.5,0-2.9-0.1-4.3-0.4c2.9,9.1,11.4,15.8,21.5,16c-7.9,6.2-17.8,9.8-28.6,9.8c-1.8,0-3.7-0.1-5.5-0.3
+	c10.2,6.5,22.3,10.3,35.3,10.3c42.3,0,65.4-35,65.4-65.4l-0.1-3C166.4,99,170.3,95,173.4,90.4z"/>
 </svg>
