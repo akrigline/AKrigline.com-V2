@@ -93,34 +93,6 @@ if (document.getElementById('home')) {
             separator: ",",
             speed: 7500
         });
-        /*
-        //Set up Delayed Morphext
-        setTimeout( function (){
-            $(".scrollThroughOffset h1").css('display', 'none');
-            $(".scrollThroughOffset .hideme").css('display', 'inline-block');
-            $(".scrollThroughOffset .hideme").Morphext({
-                // The [in] animation type. Refer to Animate.css for a list of available animations.
-                animation: "flipInX",
-                // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
-                separator: ",",
-                // The delay between the changing of each phrase in milliseconds.
-                speed: 7500
-            });
-        }, 3750 );
-
-        setTimeout( function (){
-            $(".scrollThroughOffset2 h1").css('display', 'none');
-            $(".scrollThroughOffset2 .hideme").css('display', 'inline-block');
-            $(".scrollThroughOffset2 .hideme").Morphext({
-                // The [in] animation type. Refer to Animate.css for a list of available animations.
-                animation: "flipInX",
-                // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
-                separator: ",",
-                // The delay between the changing of each phrase in milliseconds.
-                speed: 7500
-            });
-        }, 2250 );
-*/
     });
 
     /* Make parallax stop once sticky takes effect */

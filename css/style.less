@@ -58,7 +58,7 @@ h2{
 }
 
 h3{
-	font-weight: 600;
+	font-weight: 700;
 	font-size:1.4em;
 	text-transform: uppercase;
 	margin:0;
@@ -111,7 +111,7 @@ Universal Elements
 
 .loading{
 	background-color: lighten(@black,25%);
-	background-image: url(../img/svg/loading.svg);
+	background-image: url(img/svg/loading.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -278,6 +278,12 @@ article{
 	.top-nav{
 		background:@black;
 	}
+	.post{
+		img{
+	  	margin-top:15px;
+	  	margin-bottom:15px;
+		}
+	}
 }
 
 @media screen and (min-width:768px){
@@ -411,11 +417,12 @@ Home Page
 		}
 
 		.scrollThrough{
-			-webkit-backface-visibility: hidden;
+			overflow:hidden;
+			//-webkit-backface-visibility: hidden;
 			h3{
 				position:relative;
 				margin-top:.6em;
-				-webkit-backface-visibility: hidden;
+				//-webkit-backface-visibility: hidden;
 			}
 		}
 	}
@@ -438,6 +445,8 @@ Home Page
 				position:absolute;
 				bottom:2em;
 				width:100%;
+				padding-left:.4em;
+				padding-right:.4em;
 			}
 			img{
 				height:3em;
@@ -582,6 +591,10 @@ Home Page
 	position:relative;
 	h2{
 		text-align:center;
+	}
+	h5{
+		display:inline;
+		margin:0 0.4em 0 0;
 	}
 	ul.full-width{
 		margin-bottom:0;
@@ -767,7 +780,7 @@ Portfolio Single Page
 	}
 
 	.device-phone{
-		background: url(../img/svg/iphone-port.svg) center;
+		background: url(img/svg/iphone-port.svg) center;
 		background-size:100% 100%;
 		padding: 11.5% 1.8% 11% 2.25%;
 
@@ -786,9 +799,9 @@ Portfolio Single Page
 	}
 
 	.device-tablet{
-		background: url(../img/svg/ipad-port.svg) center;
+		background: url(img/svg/ipad-port.svg) center;
 		background-size:100% 100%;
-		padding: 11.5% 2.25% 11.5% 2.25%;
+		padding: 11.25% 2.125% 11% 2.125%;
 
 		width:40%;
 
@@ -805,9 +818,9 @@ Portfolio Single Page
 	}
 
 	.device-desktop{
-		background: url(../img/svg/mbp.svg) center;
+		background: url(img/svg/mbp.svg) center;
 		background-size:100% 100%;
-		padding: 12.5% 11% 15% 11%;
+		padding: 12.5% 10.5% 15% 11%;
 
 		.viewport{
 			padding-top:62.53%;
@@ -890,16 +903,6 @@ Portfolio Single Page
 	}
 }
 
-
-/* MorphText CSS */
-.morphext > span {
-	display: none;
-}
-
-.morphext > .animated {
-    display: inline-block;
-}
-
 /*
 Adapted from Animate.css - http://daneden.me/animate
 */
@@ -950,6 +953,16 @@ Adapted from Animate.css - http://daneden.me/animate
           backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
           animation-name: flipInX;
+}
+
+
+/* MorphText CSS */
+.morphext > span {
+	display: none;
+}
+
+.morphext > .animated {
+    display: inline-block;
 }
 
 
