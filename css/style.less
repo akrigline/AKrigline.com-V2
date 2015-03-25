@@ -111,7 +111,7 @@ Universal Elements
 
 .loading{
 	background-color: lighten(@black,25%);
-	background-image: url(img/svg/loading.svg);
+	background-image: url(../img/svg/loading.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -780,7 +780,7 @@ Portfolio Single Page
 	}
 
 	.device-phone{
-		background: url(img/svg/iphone-port.svg) center;
+		background: url(../img/svg/iphone-port.svg) center;
 		background-size:100% 100%;
 		padding: 11.5% 1.8% 11% 2.25%;
 
@@ -799,7 +799,7 @@ Portfolio Single Page
 	}
 
 	.device-tablet{
-		background: url(img/svg/ipad-port.svg) center;
+		background: url(../img/svg/ipad-port.svg) center;
 		background-size:100% 100%;
 		padding: 11.25% 2.125% 11% 2.125%;
 
@@ -818,7 +818,7 @@ Portfolio Single Page
 	}
 
 	.device-desktop{
-		background: url(img/svg/mbp.svg) center;
+		background: url(../img/svg/mbp.svg) center;
 		background-size:100% 100%;
 		padding: 12.5% 10.5% 15% 11%;
 
@@ -838,6 +838,7 @@ Portfolio Single Page
 		height:0;
 		position:relative;
 		margin:0 auto;
+		overflow:hidden;
 	}
 	iframe{
 		position:absolute;
@@ -845,6 +846,7 @@ Portfolio Single Page
 		bottom:0;
 		right:0;
 		left:0;
+		overflow:scroll;
 	}
 	.buttons-devices{
 		text-align:center;
