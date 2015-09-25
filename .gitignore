@@ -1,6 +1,4 @@
-
-*.cfg
-
-*.cfg
-
+bower_components
+node_modules
+.sass-cache
 *.cfg

@@ -1,0 +1,21 @@
+/*!
+Version 2 of akrigline's Site. Updated to SASS, compiled with Gulp.
+*/
+ 
+@import "modules/variables";
+
+// Import Bootstrap styles from bower
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import "compass";
+
+@import "vendor/animate";
+
+// Modules and Variables
+@import "partials/base";
+
+// Partials
+@import "partials/typography";
+@import "partials/layouts";
+@import "partials/figures";
+@import "partials/navigation";
+@import "partials/footer";

@@ -1,0 +1,153 @@
+.nav-sticker {
+  height: 3.6em;
+}
+
+@media screen and (min-width:768px) {
+  .nav-sticker {
+    height: 4.8em;
+  }
+}
+
+.top-nav {
+  height: 3em;
+  border-radius: 0;
+  transition: all 300ms;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  border: none;
+  z-index: 1000;
+  width: 100%;
+  background-color: transparentize($color2, .25);
+  .navbar-nav {
+    li {
+      transition: background 300ms;
+      &.active {
+        a {
+          color: $white
+        }
+      }
+      a {
+        line-height: 2.3em;
+        color: transparentize($white, .50);
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: transparentize($white, .25);
+        }
+      }
+    }
+  }
+  .brand {
+    display: block;
+    width: auto;
+    height: 2em;
+    margin: .6em 0 .6em .6em;
+    img {
+      height: 100%;
+      display: block;
+      float: left;
+    }
+    span.top-hide {
+      margin: 0 0 0 1em;
+      display: inline-block;
+      float: left;
+      color: $white;
+      font-weight: 100;
+      font-size: 1.4em;
+      line-height: 1.6;
+    }
+  }
+  &.stick {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.top-hide {
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.is-sticky .top-hide {
+  opacity: 1;
+}
+
+.navbar-toggle {
+  border: none;
+  .icon-bar {
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .top-nav {
+    height: 4em;
+    .brand {
+      height: 3em;
+      span.top-hide {
+        line-height: 2;
+      }
+    }
+  }
+  /*** Navigation Effects Courtesy of Mary Lou @ Codrops:
+	http://tympanus.net/codrops/2013/08/06/creative-link-effects/ ***/
+  .cl-effect-1 a::before,
+  .cl-effect-1 a::after {
+    color: transparentize($white, .5);
+    font-weight: 300;
+    font-size: 1.2em;
+    display: inline-block;
+    opacity: 0;
+    @include transition(transform 0.3s, opacity 0.2s);
+  }
+  .cl-effect-1 .active a::before,
+  .cl-effect-1 .active a::after {
+    color: $white;
+  }
+  .cl-effect-1 a:hover::before,
+  .cl-effect-1 a:hover::after {
+    color: transparentize($white, .25);
+  }
+  .cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '{';
+    @include transform(translateX(10px));
+  }
+  .cl-effect-1 a::after {
+    margin-left: 10px;
+    content: '}';
+    @include transform(translateX(-10px));
+  }
+  .cl-effect-1 .active a::before,
+  .cl-effect-1 .active a::after,
+  .cl-effect-1 a:hover::before,
+  .cl-effect-1 a:hover::after,
+  .cl-effect-1 a:focus::before,
+  .cl-effect-1 a:focus::after {
+    opacity: 1;
+    @include transform(translateX(0px));
+  }
+}
+
+.is-sticky .top-nav,
+.navbar-collapse {
+  background: $color2;
+}
+
+.single {
+  .top-nav {
+    background: $black;
+  }
+  .post {
+    img {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .navbar-collapse {
+    background: transparent;
+  }
+}

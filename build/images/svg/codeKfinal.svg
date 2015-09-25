@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/css" href="css/svg-stylesheet.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="1200" height="1200" viewBox="0 0 1200 1200" version="1.1">
+  <title>
+    CodeK Logo White
+  </title>
+  <desc>
+    Created with Sketch.
+  </desc>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="CodeK-Logo-White" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+      <g id="codeKfinal" sketch:type="MSLayerGroup" transform="translate(71.000000, 50.000000)">
+        <path d="M1060.64 999.59L1060.64 1104.19 982.41 1104.19C831.06 1104.19 748.58 1081.23 748.58 886.48L748.58 784.43C748.58 741.05 730.72 627.09 599.78 627.09L527.5 627.09 527.5 510.58 599.78 510.58C746.03 510.58 748.58 402.58 748.58 354.95L748.58 218.03C748.58 24.98 828.51 1.17 982.41 1.17L1060.64 1.17 1060.64 105.77 1018.98 105.77C985.81 105.77 886.33 106.62 886.33 252.9L886.33 378.77C886.33 447.65 877.83 553.11 724.77 570.11 876.98 584.57 886.33 701.08 886.33 761.46L886.33 852.46C886.33 975.78 943.3 999.59 1018.98 999.59 1036.83 999.59 1060.64 999.59 1060.64 999.59L1060.64 999.59Z" id="Shape" sketch:type="MSShapeGroup"/>
+        <path d="M502.84 16.48L651.65 16.48 149.97 1090.59 0.32 1090.59 502.84 16.48 502.84 16.48Z" id="Shape" sketch:type="MSShapeGroup"/>
+      </g>
+    </g>
+  </g>
+</svg>

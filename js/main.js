@@ -65,21 +65,19 @@ if (document.getElementById('home')) {
         imageScroll
     );
 
+
+    function sticky_relocate() {
+        var window_top = $(window).scrollTop();
+        var div_top = $('.nav-sticker').offset().top;
+        if (window_top > div_top) {
+            $('.top-nav').addClass('stick');
+        } else {
+            $('.top-nav').removeClass('stick');
+        }
+    }
+
+
     $(document).ready( function() {
-        //Initialize Parllax
-        $('#scene').parallax({
-            relativeInput: true,
-            clipRelativeInput: true,
-            limitY:0
-        });
-
-        //Initialize Sticky.js
-        $(".top-nav").sticky({
-            topSpacing:0,
-            getWidthFrom:'#intro',
-            responsiveWidth:true
-        });
-
         // Initialize LocalScroll
         $('.top-nav').localScroll({
             duration:500,
@@ -92,6 +90,11 @@ if (document.getElementById('home')) {
             animation: "flipInX",
             separator: ",",
             speed: 7500
+        });
+
+        $(function () {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
         });
     });
 

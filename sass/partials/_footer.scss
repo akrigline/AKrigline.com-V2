@@ -1,0 +1,76 @@
+footer#contact {
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  .social {
+    color: $white;
+    text-align: center;
+    padding: 1em;
+    h2 {
+      margin: 0;
+    }
+    img {
+      transition: all 200ms;
+      height: 3em;
+    }
+  }
+  h1 {
+    background: $color2;
+    padding: .4em;
+    color: $white;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  form,
+  article {
+    padding: 1em;
+    background: $white;
+    label {
+      font-size: 1.2em;
+      color: transparentize($black, .75);
+    }
+    input.form-control,
+    textarea.form-control {
+      background: transparent;
+      border-radius: 0;
+      border: 3px solid transparent;
+      transition: all 300ms;
+      box-shadow: none;
+    }
+    input.form-control:focus,
+    textarea.form-control:focus {
+      border: 3px solid $color2;
+      background: $color2;
+      color: $white;
+      box-shadow: none;
+    }
+  }
+}
+
+.social {
+  a:hover {
+    img {
+      @include transform (scale(1.2));
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  footer#contact {
+    padding: 5em 2em;
+    form,
+    article {
+      margin-top: 2em;
+    }
+    .contactContainer {
+      margin-top: 4em;
+    }
+  }
+}
+
+@media screen and (min-width:992px) {
+  footer#contact {
+    .contactContainer {
+      margin-top: 0;
+    }
+  }
+}
