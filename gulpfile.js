@@ -51,6 +51,7 @@ gulp.task('css', function() {
     })
 		.pipe(gulp.dest('./'))
 });
+
 gulp.task('uncssstyle', ['css'], function() {
 	gulp.src(config.cssDir)
     .pipe(uncss({
@@ -99,7 +100,7 @@ gulp.task('buildfonts', function() {
 
 // Rerun the task when a file changes
  gulp.task('watch', function() {
-   gulp.watch(config.sassDir + '/**/*.scss', ['uncssstyle']);
+   gulp.watch(config.sassDir + '/**/*.scss', ['css']);
 });
 
   gulp.task('default', ['js', 'uncssstyle']);

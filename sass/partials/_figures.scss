@@ -4,3 +4,115 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+
+/********** Intro **********/
+
+.welcome {
+  height: 95%;
+  margin-bottom: -5.3em;
+  z-index: -2;
+}
+
+#intro {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .imagePanner {
+    position: relative;
+
+    .panning {
+      height: 100vh;
+      @include min-content();
+      position: relative;
+
+      .layer {
+      	& > img{
+		      min-height: 100vh;
+		      min-width: 120vw;
+		      height: auto;
+		      width: auto;
+      	}
+      }
+    }
+
+    .scrollThrough {
+      overflow: hidden;
+      h3 {
+        position: relative;
+        margin-top: .6em;
+      }
+    }
+
+  }
+  .overlay {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header {
+    position: absolute;
+    &.name {
+      left: 26%;
+      top: 0;
+      width: 25%;
+      background: transparentize($black, .1);
+      color: $white;
+      padding: 0;
+      height: 40%;
+      border-radius: 0 0 .3em .3em;
+      .centerme {
+        position: absolute;
+        bottom: 2em;
+        width: 100%;
+        padding-left: .4em;
+        padding-right: .4em;
+      }
+      img {
+        height: 3em;
+        margin-bottom: 1em;
+      }
+      h4 {
+        color: $white;
+      }
+    }
+    //min-width:20em;
+    transition: all 300ms;
+    margin:auto;
+    color:$white;
+    text-align:center;
+    border-radius:.3em;
+    padding:2em;
+    background-color: transparentize($black, .75);
+    h1 {
+      font-size: 3em;
+      font-family: $baseType;
+      font-weight: 100;
+      line-height: 1em;
+    }
+    h1,
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+.hideme {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  #intro header.name {
+    left: 36%;
+    width: 15%;
+    img {
+      height: 7em;
+    }
+  }
+}
