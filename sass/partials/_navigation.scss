@@ -18,7 +18,10 @@
   z-index: 1000;
   width: 100%;
   background-color: transparentize($color2, .25);
-  .navbar-nav {
+  .nav {
+    @extend .navbar-nav;
+    @extend .navbar-right;
+    @extend .cl-effect-1;
     li {
       transition: background 300ms;
       &.active {
@@ -129,20 +132,9 @@
   }
 }
 
-.is-sticky .top-nav,
-.navbar-collapse {
-  background: $color2;
-}
-
 .single {
   .top-nav {
     background: $black;
-  }
-  .post {
-    img {
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
   }
 }
 

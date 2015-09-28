@@ -59,7 +59,6 @@ if (document.getElementById('home')) {
     // Reset ScrollSpy & imageScroll on Resize
     $(window).resize(
         function () {
-            var $spy = $(this).scrollspy('refresh');
             $pseudoImage.unbind("mousemove");
         },
         imageScroll

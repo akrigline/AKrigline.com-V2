@@ -10,6 +10,7 @@
 /********** Intro **********/
 
 .welcome {
+  @extend .container-fluid;
   height: 95%;
   margin-bottom: -5.3em;
   z-index: -2;
@@ -27,6 +28,7 @@
     position: relative;
 
     .panning {
+      @extend .list-unstyled;
       height: 100vh;
       @include min-content();
       position: relative;
@@ -51,6 +53,7 @@
 
   }
   .overlay {
+    @extend .layer;
     z-index: 1000;
     position: absolute;
     top: 0;
@@ -114,5 +117,14 @@
     img {
       height: 7em;
     }
+  }
+}
+
+
+
+.post {
+  img {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
