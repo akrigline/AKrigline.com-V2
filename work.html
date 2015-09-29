@@ -13,10 +13,12 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	
+	<!--[if lt IE 9]>
+	    <script src="js/vendor/html5shiv.min.js"></script>
+	<![endif]-->
+	
 	<script src="js/vendor/picturefill.min.js"></script>
 </head>
 <body class="single">
@@ -48,7 +50,7 @@
 		</div><!-- /.container -->
 	</nav>
 
-	<div class="portfolio-single container clearfix">
+	<div class="portfolio-single">
 		<div class="device device-desktop">
 			<div class="viewport loading">
 				<iframe src="http://akrigline.com"></iframe>
@@ -57,15 +59,15 @@
 
 		<div class="buttons-devices">
 			<h2>Change Device</h2>
-			<button type="button" class="btn btn-device active" id="mbp-toggle">
+			<button type="button" class="btn-device active" id="mbp-toggle" data-device="desktop">
 				<img src="img/svg/device-01.svg" class="desktop">
 				<h5>desktop</h5>
 			</button>
-			<button type="button" class="btn btn-device" id="ipad-toggle">
+			<button type="button" class="btn-device" id="ipad-toggle" data-device="tablet">
 				<img src="img/svg/device-02.svg" class="tablet">
 				<h5>tablet</h5>
 			</button>
-			<button type="button" class="btn btn-device" id="iphone-toggle">
+			<button type="button" class="btn-device" id="iphone-toggle" data-device="phone">
 				<img src="img/svg/device-03.svg" class="mobile">
 				<h5>mobile</h5>
 			</button>
@@ -119,10 +121,10 @@
 		</div>
 	</footer><!-- contact -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 
-	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/bowerfiles.js"></script>
 	<script src="js/main.js"></script>
 
 

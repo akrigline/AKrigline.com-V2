@@ -127,3 +127,106 @@
     margin-bottom: 15px;
   }
 }
+
+/* Device & Swapper for Portfolio Item
+---------------------------------------- */
+.device {
+  width: 90%;
+  margin: 0 auto;
+  transition: opacity 600ms;
+  background-size: 100% 100%;
+
+  iframe {
+    border: none;
+    @include transform-origin(0, 0, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: scroll;
+  }
+}
+
+.viewport {
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.portfolio-single {
+  .device-phone {
+    @extend .device;
+    background: url(img/svg/iphone-port.svg) center no-repeat;
+    padding: 11.5% 1.8% 11% 2.25%;
+    width: 30%;
+    .viewport {
+      padding-top: 177.7777777%;
+    }
+    iframe {
+      width: 375px;
+      height: 667px;
+    }
+  }
+  .device-tablet {
+    @extend .device;
+    background: url(img/svg/ipad-port.svg) center no-repeat;
+    padding: 11.25% 2.125% 11% 2.125%;
+    width: 40%;
+    .viewport {
+      padding-top: 133.33333333%;
+    }
+    iframe {
+      width: 991px;
+      height: 1321px;
+    }
+  }
+  .device-desktop {
+    @extend .device;
+    background: url(img/svg/mbp.svg) center no-repeat;
+    padding: 12.5% 10.5% 15% 11%;
+    .viewport {
+      padding-top: 62.53%;
+    }
+    iframe {
+      width: 1200px;
+      height: 750px;
+    }
+  }
+
+  .buttons-devices {
+    text-align: center;
+  }
+  .btn-device {
+    @extend .btn;
+    background: transparent;
+    color: transparentize($black, .5);
+    transition: color 300ms;
+    img {
+      transition: opacity 300ms;
+      opacity: 0.5;
+      &.desktop {
+        height: 5em;
+      }
+      &.tablet {
+        height: 4em;
+      }
+      &.mobile {
+        height: 3em;
+      }
+    }
+    &.active {
+      box-shadow: none;
+      color: $black;
+      img {
+        opacity: 1;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

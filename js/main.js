@@ -115,6 +115,7 @@ apply decimal to transform
 */
 $('.viewport iframe').load( function(){
     $('.viewport').removeClass('loading');
+    $device.data('current','desktop');
 });
 
 function iframeWidth() {
@@ -130,59 +131,32 @@ function iframeWidth() {
         "-moz-transform": "scale(" + scale + ")",
         "-o-transform": "scale(" + scale + ")",
         "-webkit-transform": "scale(" + scale + ")",
+        "transform": "scale(" + scale + ")"
     });
 };
 
 $(document).ready( iframeWidth );
-$(window).resize( iframeWidth );
 
-$('#iphone-toggle').click( function(){
-    $('.btn-device.active').removeClass('active');
-    $(this).addClass('active');
+$('[data-device]').click( function() {
+    var target = $(this).data('device');
+    var $active = $('.btn-device.active');
+    var current = $device.data('current');
 
-    if ( $device.hasClass('device-desktop') ) {
-        $device.removeClass('device-desktop');
-        $device.addClass('device-phone');
-        iframeWidth();
+    if ( current == target){
 
-    } else if ( $device.hasClass('device-tablet') ) {
-        $device.removeClass('device-tablet');
-        $device.addClass('device-phone');
-        iframeWidth();
+    } else {
 
-    }
-});
+        // Remove the old Active class
+        $active.removeClass('active');
+        //And add it to us
+        $(this).addClass('active');
 
-$('#ipad-toggle').click( function(){
-    $('.btn-device.active').removeClass('active');
-    $(this).addClass('active');
-    
-    if ( $device.hasClass('device-desktop') ) {
-        $device.removeClass('device-desktop');
-        $device.addClass('device-tablet');
-        iframeWidth();
-
-    } else if ( $device.hasClass('device-phone') ) {
-        $device.removeClass('device-phone');
-        $device.addClass('device-tablet');
+        $device.removeClass( 'device-' + current );
+        $device.data('current', target);
+        $device.addClass( 'device-' + target );
+        
         iframeWidth();
 
     }
-});
 
-$('#mbp-toggle').click( function(){
-    $('.btn-device.active').removeClass('active');
-    $(this).addClass('active');
-    
-    if ( $device.hasClass('device-tablet') ) {
-        $device.removeClass('device-tablet');
-        $device.addClass('device-desktop');
-        iframeWidth();
-
-    } else if ( $device.hasClass('device-phone') ) {
-        $device.removeClass('device-phone');
-        $device.addClass('device-desktop');
-        iframeWidth();
-
-    }
 });
