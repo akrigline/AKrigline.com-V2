@@ -23,7 +23,7 @@ article {
 
 /* Hack for an XL class in Bootstrap */
 
-@media screen and (min-width:1660px) {
+@media screen and (min-width: $screen-xl) {
   .container {
     width: 80%;
   }
@@ -205,39 +205,128 @@ Home Page
   padding-top: 3em;
   padding-bottom: 3em;
   background: $white;
-  section {
-    height: auto;
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
   .small,
   small {
     color: #999;
   }
-  hr {
-    margin: 1em 0 2em;
-    border-color: transparentize($black, .75);
-    padding: 0;
+
+  @media screen and (max-width: $screen-xxs){
+    .col-xs-6{
+      width: 100%;
+    }
   }
+
 }
 
-.row .row > div {
-  margin-bottom: 2em;
+.resume-section{
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.section-header{
+  @extend .row;
+}
+
+.header-title{
+  @extend .col-xs-12;
+  @extend .col-sm-2;
+  @extend .text-center;
 }
 
 .icon-resume {
   height: 8em;
   margin-bottom: -1.4em;
-}
 
-.education {
-  margin-bottom: 1em;
-}
-
-.position {
-  & +dd {
-    font-weight: 500;
+  @media screen and (min-width: $screen-sm){
+    height: 6em;
+    margin-bottom: -1.4em;
   }
+  @media screen and (min-width: $screen-xl) {
+    height: 7em;
+  }
+}
+
+.header-rule{
+  @extend .col-xs-12;
+  @extend .col-sm-10;
+  @extend .pull-right;
+  margin: 1em 0 2em;
+  border-color: transparentize($black, .75);
+  padding: 0;
+
+  @media screen and (min-width: $screen-sm){
+    margin: 3em 0;
+  }
+}
+
+.resume-content{
+  @extend .col-xs-12;
+  @extend .col-sm-10;
+  @extend .col-sm-offset-2;
+}
+
+
+.resume-about{
+  @extend .resume-section;
+
+  .about-header{
+    @extend .col-xs-12;
+  }
+}
+
+.resume-jobs{
+  @extend .resume-section;
+  @extend .col-xs-12;
+}
+
+.jobs-current{
+  @extend .col-xs-12;
+  @extend .col-md-8;
+  @extend .col-xl-12;
+}
+
+.current-position{
+  @extend .col-xs-12;
+  @extend .col-xl-4;
+}
+
+.jobs-previous{
+  @extend .col-xs-12;
+  @extend .col-md-4;
+  @extend .col-xl-12;
+}
+
+.previous-pair{
+  @extend .col-xs-12;
+  @extend .col-xl-4;
+  @extend .margin-none;
+}
+
+.previous-position{
+  @extend .col-xs-6;
+  @extend .col-md-12;
+  @extend .col-lg-6;
+  @extend .col-xl-12;
+}
+
+.resume-education{
+  @extend .resume-section;
+  @extend .col-xs-12;
+}
+
+.resume-skills{
+  @extend .resume-section;
+  @extend .col-xs-12;
+}
+
+.resume-extras{
+  @extend .resume-section;
+  @extend .col-xs-12;
+}
+
+.row .row > div {
+  margin-bottom: 2em;
 }
 
 .previousExperience {
@@ -245,41 +334,6 @@ Home Page
     margin-bottom: 0 !important;
   }
 }
-
-@media screen and (max-width:459px) {
-  #resume {
-    .col-xs-6 {
-      width: 100%;
-    }
-  }
-}
-
-@media screen and (min-width:460px) and (max-width:768px) {
-  #resume {
-    .col-xs-6 {
-      width: 50%;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #resume {
-    hr {
-      margin: 3em 0;
-    }
-  }
-  .icon-resume {
-    height: 6em;
-    margin-bottom: -1.4em;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .icon-resume {
-    height: 7em;
-  }
-}
-
 
 /********** Portfolio **********/
 
