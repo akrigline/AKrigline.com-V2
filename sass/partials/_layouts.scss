@@ -222,6 +222,7 @@ Home Page
   height: auto;
   margin-top: 2em;
   margin-bottom: 1em;
+  @extend .clearfix;
 }
 
 .section-header{
@@ -264,6 +265,9 @@ Home Page
   @extend .col-xs-12;
   @extend .col-sm-10;
   @extend .col-sm-offset-2;
+  padding-left: 0;
+  padding-right: 0;
+  @extend .clearfix;
 }
 
 
@@ -288,6 +292,7 @@ Home Page
 .current-position{
   @extend .col-xs-12;
   @extend .col-xl-4;
+  margin-bottom: 2rem;
 }
 
 .jobs-previous{
@@ -299,7 +304,9 @@ Home Page
 .previous-pair{
   @extend .col-xs-12;
   @extend .col-xl-4;
-  @extend .margin-none;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .previous-position{
@@ -307,32 +314,40 @@ Home Page
   @extend .col-md-12;
   @extend .col-lg-6;
   @extend .col-xl-12;
+  margin-bottom: 2rem;
 }
 
 .resume-education{
   @extend .resume-section;
-  @extend .col-xs-12;
+  dl{
+    @extend .col-xs-12;
+  }
 }
 
 .resume-skills{
   @extend .resume-section;
-  @extend .col-xs-12;
+}
+
+.skills-column{
+  @extend .col-xs-6;
+  @extend .col-sm-3;
 }
 
 .resume-extras{
   @extend .resume-section;
+}
+
+.extras-column{
   @extend .col-xs-12;
+  @extend .col-sm-6;
+  @extend .col-md-4;
 }
 
-.row .row > div {
-  margin-bottom: 2em;
+.extra-half{
+  @extend .small;
+  @include make-xs-column(6);
 }
 
-.previousExperience {
-  .margin-none {
-    margin-bottom: 0 !important;
-  }
-}
 
 /********** Portfolio **********/
 
@@ -349,152 +364,134 @@ Home Page
     display: inline;
     margin: 0 0.4em 0 0;
   }
-  ul.full-width {
-    margin-bottom: 0;
-    li {
-      margin-bottom: 15px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      .continue {
-        position: absolute;
-        bottom: 2em;
-        right: 50%;
-        opacity: 0;
-        transition: all 300ms;
-      }
-      a:hover {
-        .continue {
-          opacity: 1;
-          right: 2em;
-        }
-      }
-    }
-  }
-  ul.other-work {
-    li {
-      width: 50%;
-      float: left;
-      padding: 1em 0 0 1em;
-      text-align: center;
-      figure {
-        padding-top: 75%;
-        img {
-          transform: translate3d(0, 0, 0);
-          height: 100%;
-          width: auto;
-        }
-        figcaption {
-          transform: translate3d(0, 0, 0);
-          width: 100%;
-          right: -100%;
-        }
-        h3 {
-          line-height: 1em;
-        }
-      }
-    }
-  }
-  figure {
-    width: 100%;
-    height: 0;
-    position: relative;
-    padding-top: 50%;
-    overflow: hidden;
+}
+
+%projects-list{
+  @extend .list-unstyled;
+  margin-bottom: 0;
+}
+
+%project-preview{
+  margin-top: ($grid-gutter-width / 2);
+  margin-bottom: ($grid-gutter-width / 2);
+  width: 100%;
+  height: 0;
+  position: relative;
+  //padding-top: 50%;
+  overflow: hidden;
+  display: block;
+
+  img{
     display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 500ms ease;
+    @include translate3d(0,0,0);
+  }
+
+  .project-description{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: ($grid-gutter-width / 2);
+    @media screen and (min-width: $screen-sm){
+      padding: $grid-gutter-width;
+    }
+    transition: transform 500ms ease;
+    background: $black;
+    overflow: hidden;
+    color: $white;
+    @include translate3d(100%,0,0);
+    h1 {
+      margin: 0;
+    }
+    p{
+      @extend .hidden-xs;
+    }
+  }
+
+  &:hover {
     img {
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      margin: auto;
-      transition: all 500ms;
-      transform: translate3d(0, 0, 0);
+      @include translate3d(-20%,0,0);
     }
-    figcaption {
-      position: absolute;
-      right: -83.333333%;
-      top: 0;
-      height: 100%;
-      padding: 2em;
-      transition: right 500ms;
-      background: $black;
-      overflow: hidden;
-      color: $white;
-      transform: translate3d(0, 0, 0);
-      h1 {
-        margin: 0;
-      }
-    }
-    &:hover {
-      img {
-        right: 75%;
-        left: -75%;
-      }
-      figcaption {
-        right: 0 !important;
-      }
+    .project-description {
+      @include translate3d(0,0,0);
     }
   }
 }
 
-@media screen and (min-width:768px) {
-  #portfolio {
-    figure {
-      padding-top: 35%;
-      figcaption {
-        right: -50%;
-      }
-      &:hover {
-        img {
-          right: 50%;
-          left: -50%;
-        }
-      }
-    }
-    ul.other-work {
-      li {
-        width: 33.33333%;
-      }
-    }
+.web-projects{
+  @extend %projects-list;
+  li{
+    @extend .col-xs-12;
   }
 }
 
-@media screen and (min-width:992px) {
-  #portfolio {
-    figure {
-      padding-top: 27%;
-      figcaption {
-        right: -33.33333%;
-      }
-      &:hover {
-        img {
-          right: 33.33333%;
-          left: -33.33333%;
-        }
-      }
-    }
-    ul.other-work {
-      li {
-        width: 25%;
-      }
-    }
+.web-preview{
+  @extend %project-preview;
+
+  padding-top: 50%;
+  @media screen and (min-width: $screen-sm){
+    padding-top: 35%;
+  }
+  @media screen and (min-width: $screen-md){
+    padding-top: 27%;
+  }
+
+  .project-description{
+    @extend .col-xs-10;
+    @extend .col-sm-6;
+    @extend .col-md-4;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
   }
 }
 
-@media screen and (min-width:1660px) {
-  #portfolio {
-    figure {
-      figcaption {
-        padding: 5em;
-      }
-    }
+.other-projects{
+  @extend %projects-list;
+  //@extend .row;
+  li{
+    @extend .col-xs-6;
+    @extend .col-sm-4;
+    @extend .col-md-3;
+    @extend .text-center;
   }
 }
 
+.other-preview{
+  @extend %project-preview;
+  padding-top: 75%;
+  img{
+    height: 100%;
+    width: auto;
+  }
+  .project-description{
+    width: 100%;
+  }
+}
+
+.continue {
+  position: absolute;
+  bottom: $grid-gutter-width;
+  right: 50%;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+a:hover {
+  .continue {
+    opacity: 1;
+    right: $grid-gutter-width;
+  }
+}
 
 /*-------------------------------
 Portfolio Single Page

@@ -322,8 +322,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("bootstrap/glyphicons-halflings-regular.eot");
-  src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("fonts/glyphicons-halflings-regular.eot");
+  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("fonts/glyphicons-halflings-regular.woff") format("woff"), url("fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 .glyphicon {
   position: relative;
@@ -1156,7 +1156,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -1257,19 +1257,31 @@ h1, h2, h3, h4, h5, h6,
   color: inherit;
 }
 h1 small,
-h1 .small, h2 small,
-h2 .small, h3 small,
-h3 .small, h4 small,
-h4 .small, h5 small,
-h5 .small, h6 small,
+h1 .small,
+h1 .extra-half, h2 small,
+h2 .small,
+h2 .extra-half, h3 small,
+h3 .small,
+h3 .extra-half, h4 small,
+h4 .small,
+h4 .extra-half, h5 small,
+h5 .small,
+h5 .extra-half, h6 small,
 h6 .small,
+h6 .extra-half,
 .h1 small,
-.h1 .small, .h2 small,
-.h2 .small, .h3 small,
-.h3 .small, .h4 small,
-.h4 .small, .h5 small,
-.h5 .small, .h6 small,
-.h6 .small {
+.h1 .small,
+.h1 .extra-half, .h2 small,
+.h2 .small,
+.h2 .extra-half, .h3 small,
+.h3 .small,
+.h3 .extra-half, .h4 small,
+.h4 .small,
+.h4 .extra-half, .h5 small,
+.h5 .small,
+.h5 .extra-half, .h6 small,
+.h6 .small,
+.h6 .extra-half {
   font-weight: normal;
   line-height: 1;
   color: #999999;
@@ -1282,14 +1294,20 @@ h3, .h3 {
   margin-bottom: 10px;
 }
 h1 small,
-h1 .small, .h1 small,
+h1 .small,
+h1 .extra-half, .h1 small,
 .h1 .small,
+.h1 .extra-half,
 h2 small,
-h2 .small, .h2 small,
+h2 .small,
+h2 .extra-half, .h2 small,
 .h2 .small,
+.h2 .extra-half,
 h3 small,
-h3 .small, .h3 small,
-.h3 .small {
+h3 .small,
+h3 .extra-half, .h3 small,
+.h3 .small,
+.h3 .extra-half {
   font-size: 65%;
 }
 
@@ -1300,14 +1318,20 @@ h6, .h6 {
   margin-bottom: 10px;
 }
 h4 small,
-h4 .small, .h4 small,
+h4 .small,
+h4 .extra-half, .h4 small,
 .h4 .small,
+.h4 .extra-half,
 h5 small,
-h5 .small, .h5 small,
+h5 .small,
+h5 .extra-half, .h5 small,
 .h5 .small,
+.h5 .extra-half,
 h6 small,
-h6 .small, .h6 small,
-.h6 .small {
+h6 .small,
+h6 .extra-half, .h6 small,
+.h6 .small,
+.h6 .extra-half {
   font-size: 75%;
 }
 
@@ -1352,7 +1376,8 @@ p {
 }
 
 small,
-.small {
+.small,
+.extra-half {
   font-size: 85%;
 }
 
@@ -1374,7 +1399,7 @@ mark,
   text-align: right;
 }
 
-.text-center, .header-title {
+.text-center, .header-title, .other-projects li {
   text-align: center;
 }
 
@@ -1488,7 +1513,7 @@ ol ol {
   margin-bottom: 0;
 }
 
-.list-unstyled, .list-inline, #intro .imagePanner .panning {
+.list-unstyled, .list-inline, .web-projects, .other-projects, #intro .imagePanner .panning {
   padding-left: 0;
   list-style: none;
 }
@@ -1566,7 +1591,8 @@ blockquote ol:last-child {
 }
 blockquote footer,
 blockquote small,
-blockquote .small {
+blockquote .small,
+blockquote .extra-half {
   display: block;
   font-size: 80%;
   line-height: 1.42857;
@@ -1574,7 +1600,8 @@ blockquote .small {
 }
 blockquote footer:before,
 blockquote small:before,
-blockquote .small:before {
+blockquote .small:before,
+blockquote .extra-half:before {
   content: '\2014 \00A0';
 }
 
@@ -1590,23 +1617,29 @@ blockquote.header-rule {
 .blockquote-reverse footer:before,
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
+.blockquote-reverse .extra-half:before,
 blockquote.pull-right footer:before,
 blockquote.header-rule footer:before,
 blockquote.pull-right small:before,
 blockquote.header-rule small:before,
 blockquote.pull-right .small:before,
-blockquote.header-rule .small:before {
+blockquote.header-rule .small:before,
+blockquote.pull-right .extra-half:before,
+blockquote.header-rule .extra-half:before {
   content: '';
 }
 .blockquote-reverse footer:after,
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
+.blockquote-reverse .extra-half:after,
 blockquote.pull-right footer:after,
 blockquote.header-rule footer:after,
 blockquote.pull-right small:after,
 blockquote.header-rule small:after,
 blockquote.pull-right .small:after,
-blockquote.header-rule .small:after {
+blockquote.header-rule .small:after,
+blockquote.pull-right .extra-half:after,
+blockquote.header-rule .extra-half:after {
   content: '\00A0 \2014';
 }
 
@@ -1727,14 +1760,14 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .header-title, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .jobs-previous, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .previous-position, .col-sm-6, .col-md-6, .col-lg-6, .previous-position, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .jobs-current, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .header-rule, .resume-content, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .header-title, .header-rule, .resume-content, .resume-about .about-header, .jobs-current, .current-position, .jobs-previous, .previous-pair, .resume-education, .resume-skills, .resume-extras, .col-sm-12, .col-md-12, .previous-position, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .header-title, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .skills-column, .col-md-3, .other-projects li, .col-lg-3, .col-xs-4, .col-sm-4, .other-projects li, .col-md-4, .jobs-previous, .extras-column, .web-preview .project-description, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .previous-position, .skills-column, .other-projects li, .col-sm-6, .extras-column, .web-preview .project-description, .col-md-6, .col-lg-6, .previous-position, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .jobs-current, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .web-preview .project-description, .col-sm-10, .header-rule, .resume-content, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .header-title, .header-rule, .resume-content, .resume-about .about-header, .jobs-current, .current-position, .jobs-previous, .previous-pair, .resume-education dl, .extras-column, .web-projects li, .col-sm-12, .col-md-12, .previous-position, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .previous-position, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .header-title, .header-rule, .resume-content, .resume-about .about-header, .jobs-current, .current-position, .jobs-previous, .previous-pair, .resume-education, .resume-skills, .resume-extras {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .previous-position, .skills-column, .other-projects li, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .web-preview .project-description, .col-xs-11, .col-xs-12, .header-title, .header-rule, .resume-content, .resume-about .about-header, .jobs-current, .current-position, .jobs-previous, .previous-pair, .resume-education dl, .extras-column, .web-projects li {
   float: left;
 }
 
@@ -1758,7 +1791,7 @@ pre code {
   width: 41.66667%;
 }
 
-.col-xs-6, .previous-position {
+.col-xs-6, .previous-position, .skills-column, .other-projects li {
   width: 50%;
 }
 
@@ -1774,7 +1807,7 @@ pre code {
   width: 75%;
 }
 
-.col-xs-10 {
+.col-xs-10, .web-preview .project-description {
   width: 83.33333%;
 }
 
@@ -1782,7 +1815,7 @@ pre code {
   width: 91.66667%;
 }
 
-.col-xs-12, .header-title, .header-rule, .resume-content, .resume-about .about-header, .jobs-current, .current-position, .jobs-previous, .previous-pair, .resume-education, .resume-skills, .resume-extras {
+.col-xs-12, .header-title, .header-rule, .resume-content, .resume-about .about-header, .jobs-current, .current-position, .jobs-previous, .previous-pair, .resume-education dl, .extras-column, .web-projects li {
   width: 100%;
 }
 
@@ -1943,7 +1976,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .header-title, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .header-rule, .resume-content, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .header-title, .col-sm-3, .skills-column, .col-sm-4, .other-projects li, .col-sm-5, .col-sm-6, .extras-column, .web-preview .project-description, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .header-rule, .resume-content, .col-sm-11, .col-sm-12 {
     float: left;
   }
 
@@ -1955,11 +1988,11 @@ pre code {
     width: 16.66667%;
   }
 
-  .col-sm-3 {
+  .col-sm-3, .skills-column {
     width: 25%;
   }
 
-  .col-sm-4 {
+  .col-sm-4, .other-projects li {
     width: 33.33333%;
   }
 
@@ -1967,7 +2000,7 @@ pre code {
     width: 41.66667%;
   }
 
-  .col-sm-6 {
+  .col-sm-6, .extras-column, .web-preview .project-description {
     width: 50%;
   }
 
@@ -2152,7 +2185,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .jobs-previous, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .jobs-current, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .previous-position {
+  .col-md-1, .col-md-2, .col-md-3, .other-projects li, .col-md-4, .jobs-previous, .extras-column, .web-preview .project-description, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .jobs-current, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .previous-position {
     float: left;
   }
 
@@ -2164,11 +2197,11 @@ pre code {
     width: 16.66667%;
   }
 
-  .col-md-3 {
+  .col-md-3, .other-projects li {
     width: 25%;
   }
 
-  .col-md-4, .jobs-previous {
+  .col-md-4, .jobs-previous, .extras-column, .web-preview .project-description {
     width: 33.33333%;
   }
 
@@ -6307,11 +6340,11 @@ button.close {
     bottom: 20px;
   }
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before, .resume-section:before, .resume-about:before, .resume-jobs:before, .resume-education:before, .resume-skills:before, .resume-extras:before, .resume-content:before, .clearfix:after, .resume-section:after, .resume-about:after, .resume-jobs:after, .resume-education:after, .resume-skills:after, .resume-extras:after, .resume-content:after {
   content: " ";
   display: table;
 }
-.clearfix:after {
+.clearfix:after, .resume-section:after, .resume-about:after, .resume-jobs:after, .resume-education:after, .resume-skills:after, .resume-extras:after, .resume-content:after {
   clear: both;
 }
 
@@ -6525,7 +6558,7 @@ button.close {
 }
 
 @media (max-width: 767px) {
-  .hidden-xs {
+  .hidden-xs, .web-preview .project-description p, .other-preview .project-description p {
     display: none !important;
   }
 }
@@ -6647,9 +6680,7 @@ Adapted from Animate.css - http://daneden.me/animate
 
 body {
   padding-top: 4.1em;
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.6em;
-  line-height: 1.4em;
 }
 
 @media screen and (min-width: 768px) {
@@ -6657,16 +6688,6 @@ body {
     font-size: 1.4em;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-dt {
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.4em;
-}
-
 h1 {
   font-weight: 100;
 }
@@ -6680,7 +6701,6 @@ h3 {
   font-size: 1.4em;
   text-transform: uppercase;
   margin: 0;
-  line-height: 2em;
 }
 
 h4 {
@@ -6692,7 +6712,6 @@ h4 {
 
 p {
   font-size: 1em;
-  line-height: 1.8em;
 }
 
 dl {
@@ -6702,10 +6721,6 @@ dl {
 dt {
   font-weight: 600;
   text-transform: uppercase;
-}
-
-dd {
-  line-height: 2em;
 }
 
 @media screen and (min-width: 768px) {
@@ -6961,12 +6976,12 @@ Home Page
   padding-bottom: 3em;
   background: #fff;
 }
-#resume .small,
+#resume .small, #resume .extra-half,
 #resume small {
   color: #999;
 }
 @media screen and (max-width: 459px) {
-  #resume .col-xs-6, #resume .previous-position {
+  #resume .col-xs-6, #resume .previous-position, #resume .skills-column, #resume .other-projects li, .other-projects #resume li {
     width: 100%;
   }
 }
@@ -7004,12 +7019,32 @@ Home Page
   }
 }
 
-.row .row > div, .section-header .row > div, .row .section-header > div, .section-header .section-header > div {
-  margin-bottom: 2em;
+.resume-content {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.previousExperience .margin-none, .previousExperience .previous-pair {
-  margin-bottom: 0 !important;
+.current-position {
+  margin-bottom: 2rem;
+}
+
+.previous-pair {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.previous-position {
+  margin-bottom: 2rem;
+}
+
+.extra-half {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /********** Portfolio **********/
@@ -7027,126 +7062,108 @@ Home Page
   display: inline;
   margin: 0 0.4em 0 0;
 }
-#portfolio ul.full-width {
+
+.web-projects, .other-projects {
   margin-bottom: 0;
 }
-#portfolio ul.full-width li {
+
+.web-preview, .other-preview {
+  margin-top: 15px;
   margin-bottom: 15px;
-}
-#portfolio ul.full-width li:last-child {
-  margin-bottom: 0;
-}
-#portfolio ul.full-width li .continue {
-  position: absolute;
-  bottom: 2em;
-  right: 50%;
-  opacity: 0;
-  transition: all 300ms;
-}
-#portfolio ul.full-width li a:hover .continue {
-  opacity: 1;
-  right: 2em;
-}
-#portfolio ul.other-work li {
-  width: 50%;
-  float: left;
-  padding: 1em 0 0 1em;
-  text-align: center;
-}
-#portfolio ul.other-work li figure {
-  padding-top: 75%;
-}
-#portfolio ul.other-work li figure img {
-  transform: translate3d(0, 0, 0);
-  height: 100%;
-  width: auto;
-}
-#portfolio ul.other-work li figure figcaption {
-  transform: translate3d(0, 0, 0);
-  width: 100%;
-  right: -100%;
-}
-#portfolio ul.other-work li figure h3 {
-  line-height: 1em;
-}
-#portfolio figure {
   width: 100%;
   height: 0;
   position: relative;
-  padding-top: 50%;
   overflow: hidden;
   display: block;
 }
-#portfolio figure img {
+.web-preview img, .other-preview img {
   display: block;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
   margin: auto;
-  transition: all 500ms;
+  transition: transform 500ms ease;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-#portfolio figure figcaption {
+.web-preview .project-description, .other-preview .project-description {
   position: absolute;
-  right: -83.333333%;
   top: 0;
+  right: 0;
   height: 100%;
-  padding: 2em;
-  transition: right 500ms;
+  padding: 15px;
+  transition: transform 500ms ease;
   background: #000;
   overflow: hidden;
   color: #fff;
-  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
 }
-#portfolio figure figcaption h1 {
+@media screen and (min-width: 768px) {
+  .web-preview .project-description, .other-preview .project-description {
+    padding: 30px;
+  }
+}
+.web-preview .project-description h1, .other-preview .project-description h1 {
   margin: 0;
 }
-#portfolio figure:hover img {
-  right: 75%;
-  left: -75%;
+.web-preview:hover img, .other-preview:hover img {
+  -moz-transform: translate3d(-20%, 0, 0);
+  -webkit-transform: translate3d(-20%, 0, 0);
+  transform: translate3d(-20%, 0, 0);
 }
-#portfolio figure:hover figcaption {
-  right: 0 !important;
+.web-preview:hover .project-description, .other-preview:hover .project-description {
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
+.web-preview {
+  padding-top: 50%;
+}
 @media screen and (min-width: 768px) {
-  #portfolio figure {
+  .web-preview {
     padding-top: 35%;
-  }
-  #portfolio figure figcaption {
-    right: -50%;
-  }
-  #portfolio figure:hover img {
-    right: 50%;
-    left: -50%;
-  }
-  #portfolio ul.other-work li {
-    width: 33.33333%;
   }
 }
 @media screen and (min-width: 992px) {
-  #portfolio figure {
+  .web-preview {
     padding-top: 27%;
   }
-  #portfolio figure figcaption {
-    right: -33.33333%;
-  }
-  #portfolio figure:hover img {
-    right: 33.33333%;
-    left: -33.33333%;
-  }
-  #portfolio ul.other-work li {
-    width: 25%;
-  }
 }
-@media screen and (min-width: 1660px) {
-  #portfolio figure figcaption {
-    padding: 5em;
-  }
+.web-preview img {
+  width: 100%;
+  height: auto;
 }
+
+.other-preview {
+  padding-top: 75%;
+}
+.other-preview img {
+  height: 100%;
+  width: auto;
+}
+.other-preview .project-description {
+  width: 100%;
+}
+
+.continue {
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+a:hover .continue {
+  opacity: 1;
+  right: 30px;
+}
+
 /*-------------------------------
 Portfolio Single Page
 ----------*/
@@ -7366,7 +7383,6 @@ Portfolio Single Page
 }
 #intro header h1 {
   font-size: 3em;
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 100;
   line-height: 1em;
 }

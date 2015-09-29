@@ -1,8 +1,7 @@
 body {
   padding-top: 4.1em;
-  font-family: $baseType;
   font-size: 1.6em;
-  line-height: $lineheight;
+  //line-height: $lineheight;
 }
 
 @media screen and (min-width:768px) {
@@ -17,8 +16,7 @@ h3,
 h4,
 h5,
 dt {
-  font-family: $baseType;
-  line-height: $lineheight;
+  //line-height: $lineheight;
 }
 
 h1 {
@@ -34,7 +32,7 @@ h3 {
   font-size: 1.4em;
   text-transform: uppercase;
   margin: 0;
-  line-height: 2em;
+  //line-height: 2em;
 }
 
 h4 {
@@ -46,7 +44,7 @@ h4 {
 
 p {
   font-size: 1em;
-  line-height: 1.8em;
+  //line-height: 1.8em;
 }
 
 hr {
@@ -63,7 +61,7 @@ dt {
 }
 
 dd {
-  line-height: 2em;
+  //line-height: 2em;
 }
 
 @media screen and (min-width:768px) {
