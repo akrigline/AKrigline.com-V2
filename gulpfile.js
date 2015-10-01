@@ -52,15 +52,6 @@ gulp.task('css', function() {
 		.pipe(gulp.dest('./'))
 });
 
-gulp.task('uncssstyle', ['css'], function() {
-	gulp.src(config.cssDir)
-    .pipe(uncss({
-    	html: [ config.htmlDir ]
-    }))
-		.pipe(gulp.dest('./'))
-});
-
-
 //Build one js files in the 'build' directory
 gulp.task('js', ['bowerfiles'], function(){
 	gulp.src(config.jsDir + '/**/*.js')
@@ -77,9 +68,13 @@ gulp.task('buildjs', ['js'], function() {
 		.pipe(gulp.dest(config.buildDir + '/js'))
 });
 
-gulp.task('buildcss', ['uncssstyle'], function() {
+gulp.task('buildcss', ['css'], function() {
 	gulp.src('./*.css')
 		.pipe(concat('style.css'))
+    .pipe(uncss({
+    	html: [ config.htmlDir ],
+    	ignore: [ /(\.portfolio-single )?\.device-\w+ ?\.?\w+/ , /stick/ ]
+    }))
 		.pipe(gulp.dest(config.buildDir))
 });
 
@@ -106,4 +101,4 @@ gulp.task('buildfonts', function() {
   gulp.task('default', ['js', 'uncssstyle']);
 
 //Gather all Final Files into a 'build' directory
-gulp.task('build', ['buildjs', 'buildcss', 'buildhtml', 'buildimg', 'buildfonts']);
+gulp.task('build', ['buildjs', 'buildcss', 'buildhtml', 'buildimg', 'buildfonts']);ldhtml', 'buildimg', 'buildfonts']);
