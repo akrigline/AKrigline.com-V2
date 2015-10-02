@@ -12,11 +12,6 @@
     "node_modules",
     "bower_components"
   ],
-  "overrides": {
-    "BOWER-PACKAGE": {
-      "main": "**/*.js"
-    }
-  },
   "devDependencies": {
     "bootstrap-sass-official": "~3.1.1",
     "jquery.localScroll": "~1.4.0",

@@ -28,8 +28,8 @@ gulp.task('bower', function() { 
 //Concats all Bower js files and puts them in vendor
 gulp.task("bowerfiles", ['bower'], function(){
   return gulp.src(bowerFilesMain({
-  	filter: '**/*.js',
-  	includeDev: 'exclusive'
+  	filter: ['/(?![jquery.js])(\w+\.)?\w+\.js/'],
+  	includeDev: 'exclusive',
   }), {base: config.bowerDir })
   	.pipe(concat('bowerfiles.js'))
     .pipe(gulp.dest(config.jsDir + '/vendor'))
@@ -62,9 +62,8 @@ gulp.task('js', ['bowerfiles'], function(){
 
 //Build Functions
 gulp.task('buildjs', ['js'], function() {
-	gulp.src([config.jsDir + '/main.js', config.jsDir + '/vendor/bowerfiles.js'])
+	gulp.src(config.jsDir + '/**/')
 		.pipe(uglify())
-		.pipe(concat('app.js'))
 		.pipe(gulp.dest(config.buildDir + '/js'))
 });
 
@@ -101,4 +100,4 @@ gulp.task('buildfonts', function() {
   gulp.task('default', ['js', 'uncssstyle']);
 
 //Gather all Final Files into a 'build' directory
-gulp.task('build', ['buildjs', 'buildcss', 'buildhtml', 'buildimg', 'buildfonts']);ldhtml', 'buildimg', 'buildfonts']);
+gulp.task('build', ['buildjs', 'buildcss', 'buildhtml', 'buildimg', 'buildfonts']);
